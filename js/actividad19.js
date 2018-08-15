@@ -43,30 +43,26 @@ $('.enc').click(function() {
     }
 
 });
-var respr1=0;
-var respr2=0;
-var respr3=0;
-var respr4=0;
-var respr5=0;
-var respr6=0;
-var respr7=0;
-var respr8=0;
+var respr=0;
+var respri=0;
 
 function calculoR() {
     var caja1 = $("div[id=caja_img1]").find('img')[0].id;
     if ($("#caja_img1").hasClass("seleccionCaja")) {
 
         if ((caja1 == "img/i2_p21_act2.jpg") || (caja1 == "img/i5_p21_act2.jpg") || (caja1 == "img/i7_p21_act2.jpg") || (caja1 == "img/i8_p21_act2.jpg")) {
-            respr1 = 1;
+            respr = respr+1;
             $("#caja_img1").addClass('correcto')
-        } else {
-            $("#caja_img1").removeClass('correcto')
+        } else 
+        {
+            respri=respri+1;
+            $("#caja_img1").removeClass('seleccionCaja')
             $("#caja_img1").addClass('incorrecto')
 
         }
 
     } else {
-        respr1 = 0;
+        respr = respr+0;
 
     }
 
@@ -74,18 +70,19 @@ function calculoR() {
     if ($("#caja_img2").hasClass("seleccionCaja")) {
 
         if ((caja2 == "img/i2_p21_act2.jpg") || (caja2 == "img/i5_p21_act2.jpg") || (caja2 == "img/i7_p21_act2.jpg") || (caja2 == "img/i8_p21_act2.jpg")) {
-            respr2 = 1;
+            respr = respr+1;
             $("#caja_img2").addClass('correcto')
 
         } else {
-            $("#caja_img2").removeClass('correcto')
+            respri = respri+1;
+            $("#caja_img2").removeClass('seleccionCaja')
             $("#caja_img2").addClass('incorrecto')
 
 
         }
 
     } else {
-        respr2 = 0;
+        respr = respr+0
 
     }
 
@@ -93,36 +90,38 @@ function calculoR() {
     if ($("#caja_img3").hasClass("seleccionCaja")) {
 
         if ((caja3 == "img/i2_p21_act2.jpg") || (caja3 == "img/i5_p21_act2.jpg") || (caja3 == "img/i7_p21_act2.jpg") || (caja3 == "img/i8_p21_act2.jpg")) {
-            respr3 = 1;
+            respr = respr+1;
             $("#caja_img3").addClass('correcto')
         } else {
-            $("#caja_img3").removeClass('correcto')
+            respri = respri+1;
+            $("#caja_img3").removeClass('seleccionCaja')
             $("#caja_img3").addClass('incorrecto')
 
 
         }
 
     } else {
-        respr3 = 0;
+        respr = respr+0
 
     }
     var caja4 = $("div[id=caja_img4]").find('img')[0].id;
     if ($("#caja_img4").hasClass("seleccionCaja")) {
 
         if ((caja4 == "img/i2_p21_act2.jpg") || (caja4 == "img/i5_p21_act2.jpg") || (caja4 == "img/i7_p21_act2.jpg") || (caja4 == "img/i8_p21_act2.jpg")) {
-            respr4 = 1;
+            respr = respr+1;
             $("#caja_img4").addClass('correcto')
 
 
         } else {
-            $("#caja_img4").removeClass('correcto')
+            respri = respri+1;
+            $("#caja_img4").removeClass('seleccionCaja')
             $("#caja_img4").addClass('incorrecto')
 
 
         }
 
     } else {
-        respr4 = 0;
+        respr = respr+0
 
     }
 
@@ -130,20 +129,21 @@ function calculoR() {
     if ($("#caja_img5").hasClass("seleccionCaja")) {
 
         if ((caja5 == "img/i2_p21_act2.jpg") || (caja5 == "img/i5_p21_act2.jpg") || (caja5 == "img/i7_p21_act2.jpg") || (caja5 == "img/i8_p21_act2.jpg")) {
-            respr5 = 1;
+            respr = respr+1;
 
             $("#caja_img5").addClass('correcto')
 
 
         } else {
-            $("#caja_img5").removeClass('correcto')
+            respri = respri+1;
+            $("#caja_img5").removeClass('seleccionCaja')
             $("#caja_img5").addClass('incorrecto')
 
 
         }
 
     } else {
-        respr5 = 0;
+        respr = respr+0
 
     }
 
@@ -151,20 +151,21 @@ function calculoR() {
     if ($("#caja_img6").hasClass("seleccionCaja")) {
 
         if ((caja6 == "img/i2_p21_act2.jpg") || (caja6 == "img/i5_p21_act2.jpg") || (caja6 == "img/i7_p21_act2.jpg") || (caja6 == "img/i8_p21_act2.jpg")) {
-            respr6 = 1;
+            respr = respr+1;
 
             $("#caja_img6").addClass('correcto')
 
 
         } else {
-            $("#caja_img6").removeClass('correcto')
+            respri = respri+1;
+            $("#caja_img6").removeClass('seleccionCaja')
             $("#caja_img6").addClass('incorrecto')
 
 
         }
 
     } else {
-        respr6 = 0;
+        respr = respr+0
 
     }
 
@@ -172,20 +173,20 @@ function calculoR() {
     if ($("#caja_img7").hasClass("seleccionCaja")) {
 
         if ((caja7 == "img/i2_p21_act2.jpg") || (caja7 == "img/i5_p21_act2.jpg") || (caja7 == "img/i7_p21_act2.jpg") || (caja7 == "img/i8_p21_act2.jpg")) {
-            respr7 = 1;
-
+            respr = respr+1;
             $("#caja_img7").addClass('correcto')
 
 
         } else {
-            $("#caja_img7").removeClass('correcto')
+            respri = respri+1;
+            $("#caja_img7").removeClass('seleccionCaja')
             $("#caja_img7").addClass('incorrecto')
 
 
         }
 
     } else {
-        respr7 = 0;
+        respr = respr+0
 
     }
 
@@ -193,31 +194,42 @@ function calculoR() {
 if ($("#caja_img8").hasClass("seleccionCaja")) {
 
     if ((caja8 == "img/i2_p21_act2.jpg") || (caja8 == "img/i5_p21_act2.jpg") || (caja8 == "img/i7_p21_act2.jpg") || (caja8 == "img/i8_p21_act2.jpg")) {
-        respr8 = 1;
+        respr = respr+1;
 
         $("#caja_img8").addClass('correcto')
 
 
     } else {
-        $("#caja_img8").removeClass('correcto')
+        respri = respri+1;
+        $("#caja_img8").removeClass('seleccionCaja')
         $("#caja_img8").addClass('incorrecto')
 
 
     }
 
 } else {
-    respr8 = 0;
+    respr = respr+0
 
 }
 
 
 
 
-    var suma = parseInt(respr1) + parseInt(respr2) + parseInt(respr3) + parseInt(respr4) + parseInt(respr5) + parseInt(respr6) + parseInt(respr7)+parseInt(respr8);
-    var totalR = suma ;
+    var suma = respr;
+    var sumai = respri;
+    var totalR = (suma-sumai) ;
     var NotaF = (totalR * 10) / 4;
+    if(NotaF<0)
+    {
+    NotaF=0;
     $('#txtNota').html(NotaF.toFixed(2) + ' ');
-
     document.getElementById('bt_comprobar').disabled = true;
+    }
+    else
+    {
+    $('#txtNota').html(NotaF.toFixed(2) + ' ');
+    document.getElementById('bt_comprobar').disabled = true;
+    }
+    
 
 }

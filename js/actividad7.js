@@ -40,11 +40,6 @@ numero_pagina(14);
                 });
                  $( ".btnCalificar" ).bind( "click", function() { //click en el boton iniciar
                     
-                    if (cont == 0) {
-                        alert('Debe escoger al menos una respuesta de la pregunta');
-                    } 
-                    else 
-                    {
                     
                     cont++;
                     $( this).unbind( "click" );
@@ -65,6 +60,6 @@ numero_pagina(14);
                     //var total = suma.toFixed(2);
                     $("#txtNota").html(total);
                     f_tiempo();
-                }
+                
                 });
             }

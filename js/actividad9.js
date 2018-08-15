@@ -7,7 +7,7 @@ var act13 = [
     '</td></tr></table></div>'
     ],
     ['<div class="col-lg-4"><img src="img/i1_15_act7.jpg"></div><div class="col-lg-1" class="left" ><table><tr>'+
-    '<td><input type="text"  size="1" style="width:70px" class="form-control border-blue respuestas"><input type="hidden" style="color:blue" class="solucion" value="-8">'+
+    '<td ROWSPAN=3><input type="text"  size="1" style="width:70px" class="form-control border-blue respuestas"><input type="hidden" style="color:blue" class="solucion" value="-"></td><td><input type="text"  size="1" style="width:70px" class="form-control border-blue respuestas"><input type="hidden" style="color:blue" class="solucion" value="-8">'+
     '</td></tr><tr><td class="numerador"></td></tr><tr>'+
     '<td ><input type="text"  size="1" style="width:70px" class="form-control border-blue respuestas"><input type="hidden" style="color:blue" class="solucion" value="9">'+
     '</td></tr></table></div>'

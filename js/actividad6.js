@@ -204,15 +204,22 @@ function calculoR() {
     var suma = parseInt(respr1) + parseInt(respr2) + parseInt(respr3) + parseInt(respr4) + parseInt(respr5) + parseInt(respr6) + parseInt(respr7) ;
     var sumai = parseInt(respri1) + parseInt(respri2) + parseInt(respri3) + parseInt(respri4) + parseInt(respri5) + parseInt(respri6) + parseInt(respri7) ;
     
-    if (suma == 0) {
+    if (suma == 0 && sumai ==0 ) {
         alert('Debe escoger al menos una respuesta de la pregunta');
-    
     } 
     else 
     {
-    var totalR = (suma-sumai)*2 ;
-    $('#txtNota').html(totalR.toFixed(2) + ' ');
-
-    document.getElementById('bt_comprobar').disabled = true;
+    var totalR = (suma-sumai)*10/5 ;
+    if(totalR<0)
+    {
+        totalR=0;
+        $('#txtNota').html(totalR.toFixed(2) + ' ');
+        document.getElementById('bt_comprobar').disabled = true;
     }
+    else
+    {
+        $('#txtNota').html(totalR.toFixed(2) + ' ');
+        document.getElementById('bt_comprobar').disabled = true;
+    }
+}
 }

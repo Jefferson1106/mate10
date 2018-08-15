@@ -24,7 +24,7 @@
     }
     
     #activity label {
-        font-size: 25px
+        font-size: 17px
     }
     
    
@@ -46,7 +46,7 @@
 <div id="nota-informativa" class="nota-ayuda">
         <button type="button" class="close" onclick="cerrar_ayuda()" aria-label="Close"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
         <!--ACA ESCRIBIR TEXTO DE LA AYUDA DE LA ACTIVIDAD-->
-        Completa la tabla, llena lainformación en los recuadros respectivos.
+        Escribe la respuesta correcta en los respectivos recuadros sin espacios. Ayudate de los signos especiales copialos y pégalos si es necesario.
         <br> 
         <span id="ayudas"></span>
         </div>
@@ -87,7 +87,7 @@
                         </button>
                     </li>
                     <li>
-                        <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="calificar_abierta()" >
+                        <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="comprobar_calificar_txt()" >
                             <span  class="glyphicon glyphicon-check" aria-hidden="true"></span>
                         </button>
                     </li>
@@ -125,74 +125,49 @@
                 
                 <!--pregunats de la actividad-->
                 <div class="text-question"> 
-                        <input type="text" maxlength="2" size="2" style="text-align:center" class="nota-abierta" min="0" max="10">
-                        &nbsp;<span><b> 11.Trabaja </b> con tu compañero para llenar la siguiente tabla.</span>
-                </div>
-                <div class="row" align="center">
-                    <br>
-                    <table  class="table">
-                        <tr>
-                            <td></td>
-                            <td  bgcolor="#E6B8EA">Números</td>
-                            <td  bgcolor="#F9CAA3">Clasificación</td>
-                        </tr>
-                        <tr>
-                            <td bgcolor="#FFDCBF">1</td>
-                            <td><input type="text" style="width:200px"></td>
-                            <td><input type="text" style="width:200px"></td>
-                        </tr>
-                        <tr>
-                                <td bgcolor="#FFDCBF">2</td>
-                                <td><input type="text" style="width:200px"></td>
-                                <td><input type="text" style="width:200px"></td>
-                            </tr>
-                            <tr>
-                                    <td bgcolor="#FFDCBF">3</td>
-                                    <td><input type="text" style="width:200px"></td>
-                                    <td><input type="text" style="width:200px"></td>
-                                </tr>
-                                <tr>
-                                        <td bgcolor="#FFDCBF">4</td>
-                                        <td><input type="text" style="width:200px"></td>
-                                        <td><input type="text" style="width:200px"></td>
-                                    </tr>
-                                    <tr>
-                                            <td bgcolor="#FFDCBF">5</td>
-                                            <td><input type="text" style="width:200px"></td>
-                                            <td><input type="text" style="width:200px"></td>
-                                        </tr>
-                                        <tr>
-                                                <td bgcolor="#FFDCBF">6</td>
-                                                <td ><input type="text" style="width:200px"></td>
-                                                <td><input type="text" style="width:200px"></td>
-                                            </tr>
-                                            <tr>
-                                                    <td bgcolor="#FFDCBF">7</td>
-                                                    <td><input type="text" style="width:200px"></td>
-                                                    <td><input type="text" style="width:200px"></td>
-                                                </tr>
-                                                <tr>
-                                                        <td bgcolor="#FFDCBF">8</td>
-                                                        <td><input type="text" style="width:200px"></td>
-                                                        <td><input type="text" style="width:200px"></td>
-                                                    </tr>
-                                                    <tr>
-                                                            <td bgcolor="#FFDCBF">9</td>
-                                                            <td><input type="text" style="width:200px"></td>
-                                                            <td><input type="text" style="width:200px"></td>
-                                                        </tr>
-                                                        <tr>
-                                                                <td bgcolor="#FFDCBF">10</td>
-                                                                <td><input type="text" style="width:200px"></td>
-                                                                <td><input type="text" style="width:200px"></td>
-                                                            </tr>
-
-
                         
-                       
-                    </table>
+                <span><b>3. Con un compañero, </b>   representen por intervalos y <b>grafiquen </b>> en el cuaderno:</span>
+                </div>
+                <br>
+                <label>Copia estos símbolos y pégalos donde sea necesario:  ∞  </label>
+                <table class="table">
+                    <tr>
+                        <td>
+                            <div class="col-lg-12 cajas imagen enc " id="caja_img1"></div>
+                            
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        
+                        <td>
+                                <div class="col-lg-12 cajas imagen enc " id="caja_img2"></div>
+                                
+                                
+                        </td>
+                    </tr>
+
+                    <tr>
+                        
+                        <td>
+                            <div class="col-lg-12 cajas imagen enc " id="caja_img3"></div>
+                            
+                            
+                        </td> 
+                    </tr>
+                    <tr>
+                        
+                        <td>
+                            <div class="col-lg-12 cajas imagen enc " id="caja_img4"></div>
+                           
+                            
+                        </td>
+                    </tr>
                     
-                
+                </table> 
+
+
+
                 </div>              
                 </div>
             </div>
@@ -257,7 +232,7 @@
         <script src="js/calcularNotas.js"></script>
         <script src="js/mathquillNOTEDITABLE.js"></script>
         <script src="js/mathCalc.js"></script>
-        <script src="js/actividad13.js"></script>
+        <script src="js/actividad25.js"></script>
         
         
 </body>
