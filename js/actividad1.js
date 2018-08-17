@@ -356,7 +356,7 @@ document.getElementById('bt_comprobar').addEventListener('click',function(){
     if(Rp11 == ''){
         Rp11 =0;
     }
-    var total = Rp1+Rp2+Rp3+Rp4+Rp5+Rp6+Rp7+Rp8+Rp9+Rp10+Rp11;
+    var total = parseInt(Rp1)+parseInt(Rp2)+parseInt(Rp3)+parseInt(Rp4)+parseInt(Rp5)+parseInt(Rp6)+parseInt(Rp7)+parseInt(Rp8)+parseInt(Rp9)+parseInt(Rp10)+parseInt(Rp11);
     showAnswer('txtNota',total)
 });
 //#endregion

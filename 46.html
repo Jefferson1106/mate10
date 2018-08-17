@@ -46,7 +46,7 @@
 <div id="nota-informativa" class="nota-ayuda">
         <button type="button" class="close" onclick="cerrar_ayuda()" aria-label="Close"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
         <!--ACA ESCRIBIR TEXTO DE LA AYUDA DE LA ACTIVIDAD-->
-        Completa la tabla de acuerdo a lo que se indica en los titulos de los recuadros.
+        Calcula el área y escribe la en respuesta en el recuadro.
         <br> 
         <span id="ayudas"></span>
         </div>
@@ -87,7 +87,7 @@
                         </button>
                     </li>
                     <li>
-                        <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="comprobar_calificar_txt()" >
+                        <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="calificar_abierta()">
                             <span  class="glyphicon glyphicon-check" aria-hidden="true"></span>
                         </button>
                     </li>
@@ -125,74 +125,18 @@
                 
                 <!--pregunats de la actividad-->
                 <div class="text-question"> 
-                        <span><b> 2.Completa </b>la tabla</span>
+                        <input type="text" min="1" max="10" maxlength="2" size="2" style="text-align:center" class="nota-abierta" min="0" max="10">
+                        &nbsp;<span><b> 6. Calcula </b> el área de la figura compuesta.</span>
                 </div>
-                <div class="row" >
-                    <br>
-                    <table class="table">
-                        <tr>
-                            <td rowspan="2" bgcolor="#54BEF6" WIDTH="5%">Expresión decimal</td>
-                            <td rowspan="2" bgcolor="#90FF7E" WIDTH="5%">Expresión fraccionaria</td>
-                            <td colspan="3" bgcolor="#099B4B" WIDTH="25%">Marca con una x según corresponda</td>
-                        </tr>
-                        <tr>
-                            <td bgcolor="#00BE9B">Decimal exacto</td>
-                            <td bgcolor="#C15AC6">Decimal periódico</td>
-                            <td bgcolor="#00BE9B">Irracional</td>
-                        </tr>
+                <table class="table">
                     
                         <tr>
-                                <td >0, 454545…</td>
-                                <td ><input type="text"></td>
-                                <td ><input type="text"></td>
-                                <td ><input type="text" ></td>
-                                <td ><input type="text" ></td>
-                                
+                            <td style="width:40px"><img src="img/i1_p31_act6.jpg"></td>
+                            
                         </tr>
-                        <tr>
-                                <td ><input type="text" ></td>
-                                    <td >22/10</td>
-                                    <td ><input type="text" ></td>
-                                    <td ><input type="text" ></td>
-                                    <td ><input type="text" ></td>
-                                    
-                                </tr>
-                                <tr>
-                                        <td ><input type="text" ></td>
-                                        <td >π</td>
-                                        <td ><input type="text" ></td>
-                                        <td ><input type="text" ></td>
-                                        <td ><input type="text" ></td>
-                                        
-                                    </tr>
-                                    <tr>
-                                            <td ><input type="text" ></td>
-                                            <td ><input type="text" ></td>
-                                            <td >X</td>
-                                            <td ></td>
-                                            <td ></td>
-                                            
-                                        </tr>
-                                        <tr>
-                                                <td ><input type="text" ></td>
-                                                <td ><input type="text" ></td>
-                                                <td ></td>
-                                                <td >X</td>
-                                                <td ></td>
-                                                
-                                            </tr>
-                                            <tr>
-                                                    <td ><input type="text" ></td>
-                                                    <td ><input type="text" ></td>
-                                                    <td ></td>
-                                                    <td ></td>
-                                                    <td >X</td>
-                                                    
-                                                </tr>
-                    </table>
-                    
-                
-                </div>              
+                    </table>  
+                    <textarea  class="form-control text-question no-redimensionar respesta" cols="60" rows="3"></textarea><br>
+         
                 </div>
             </div>
         </div>
@@ -256,7 +200,7 @@
         <script src="js/calcularNotas.js"></script>
         <script src="js/mathquillNOTEDITABLE.js"></script>
         <script src="js/mathCalc.js"></script>
-        <script src="js/actividad4.js"></script>
+        <script src="js/actividad46.js"></script>
         
         
 </body>
