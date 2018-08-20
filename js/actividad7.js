@@ -5,7 +5,7 @@ numero_pagina(14);
             var resp=[],i;
             f_iniciar();
             function f_iniciar(){
-                var pal1=['<span class="bg_palabra c4">&nbsp;2π&nbsp;</span>','<span class="bg_palabra c1">&nbsp;5/4&nbsp;</span>','<span class="bg_palabra c2">&nbsp;5/9&nbsp;</span>','<span class="bg_palabra c4">&nbsp;√3&nbsp;</span>','<span class="bg_palabra c5">&nbsp;18/4&nbsp;</span>','<span class="bg_palabra c3">&nbsp;ln(3)&nbsp;</span>'];
+                var pal1=['<span class="bg_palabra c4">&nbsp;2π&nbsp;</span>','<span class="bg_palabra c1">&nbsp;5/4&nbsp;</span>','<span class="bg_palabra c2">&nbsp;5/9&nbsp;</span>','<span class="bg_palabra c4">&nbsp;√3&nbsp;</span>','<span class="bg_palabra c3">&nbsp;ln(3)&nbsp;</span>'];
                 var txt1 = ['<tr><td><div class="cajas imagen c1" id="caja_img1"></div></td><td><div class="col-lg-6 col-md-6 col-sm-6 col-xs-7 cajas texto" id="caja_txt1">"Decimal exacto"</div></td></tr>','<tr><td><div class="cajas imagen c2" id="caja_img2"></div></td><td><div class="col-lg-6 col-md-6 col-sm-6 col-xs-7 cajas texto" id="caja_txt2">"Decimal periódico"</div></td></tr>','<tr><td><div class="cajas imagen c3" id="caja_img3"></div></td><td><div class="col-lg-6 col-md-6 col-sm-6 col-xs-7 cajas texto" id="caja_txt3">“Irracional trascendental”</div></td></tr>','<tr><td><div class="cajas imagen c4" id="caja_img4"></div></td><td><div class="col-lg-6 col-md-6 col-sm-6 col-xs-7 cajas texto" id="caja_txt4">“Irracional algebraico"</div></td></tr>'];
                 pal1.sort(f_randomico);
                 txt1.sort(f_randomico);
