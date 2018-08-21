@@ -24,8 +24,12 @@
     }
     
     #activity label {
-        font-size: 25px
+        font-size: 17px
     }
+    
+   
+    
+    
     .base {
         width: 60px;
         background-color: #99ccff;
@@ -37,33 +41,12 @@
         border-top: 2px solid;
         border-radius: 50%
     }
-    
-    
-    .seleccionCaja{
-        background-color: #58D68D;
-        color: white;
-    }
-    .deseleccionCaja{
-        background-color: white;
-        color: black;
-    }
-    .correcto{
-        color: #ffffff;
-        background-color: #8FB435;
-        font-weight: 700;
-    }
-    .incorrecto{
-        color: #ffffff;
-        background-color: #E76E80;
-        font-weight: 700;
-    }
-    
     </style>
 <body>
 <div id="nota-informativa" class="nota-ayuda">
         <button type="button" class="close" onclick="cerrar_ayuda()" aria-label="Close"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
         <!--ACA ESCRIBIR TEXTO DE LA AYUDA DE LA ACTIVIDAD-->
-        Coloca el número en los casilleros de la derecha en forma ascendente de acuerdo a la tabla.
+        Extrae los valores que sean posibles y escribe la respuesta correcta en los recuadros.
         <br> 
         <span id="ayudas"></span>
         </div>
@@ -104,7 +87,7 @@
                         </button>
                     </li>
                     <li>
-                        <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar"  onclick="comprobar_calificar_txt()" >
+                        <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="calificar_abierta()" >
                             <span  class="glyphicon glyphicon-check" aria-hidden="true"></span>
                         </button>
                     </li>
@@ -142,34 +125,36 @@
                 
                 <!--pregunats de la actividad-->
                 <div class="text-question"> 
-                        <span><b> 3. Ordena  </b> en forma ascendente los siguientes números con la ayuda de una calculadora.</span>
+                <input type="text" maxlength="2" size="2" style="text-align:center" class="nota-abierta" min="0" max="10">
+                &nbsp;<span><b>Aplica  </b>la Estrategia.</span>
                 </div>
-                <table>
-                        <tr>
-                            <td><label>a)</label></td>
-                                <td>
-                                    <div class="col-lg-12 cajas imagen enc " id="caja_img1"></div>
-                                    
-                                    
-                                </td>
-                        </tr>
-                        
-                        <tr>
-                                <td><label>b)</label></td>
-                                <td>
-                                    <div class="col-lg-12 cajas imagen enc " id="caja_img2"></div>
-                                    
-                                </td>
-                        </tr>
-                        <tr>
-                                <td><label>c)</label></td>
-                                <td>
-                                    <div class="col-lg-12 cajas imagen enc " id="caja_img3"></div>  
-                                    
-                                </td>
-                        </tr>
-                </table>
-
+                <br>
+                <span><b>1.</b> El Museo de Arte Contemporáneo Boa Viagem, es un edificio
+                    híbrido diseñado por Oscar Niemeyer, de 50 metros de diámetro
+                    y 16 metros de altura, que se alza victorioso y espléndido
+                    sobre una gran plaza pública pavimentada, desde la que se
+                    puede observar una maravillosa vista de la bahía. Determina
+                    el área y el perímetro del Museo.</span>
+                    <br><br>
+                    <textarea  class="form-control text-question no-redimensionar " cols="60" rows="3" ></textarea><br>
+                <br>
+                <span><b>2.</b> The Sunrise Hotel Kempinski, Pekín, se dice que se asemeja a
+                    la salida del Sol por su forma circular, posee una altura de 97
+                    metros y cuenta con 21 plantas con 306 habitaciones y suites,
+                    además de salas de reuniones, instalaciones recreativas y de
+                    fitness, y una gran variedad de restaurantes y bares. Determina
+                    el perímetro de su forma.</span>
+                    <br><br>
+                    <textarea  class="form-control text-question no-redimensionar " cols="60" rows="3" ></textarea><br>
+                <br>
+                <span><b>3.</b> En Quito tenemos una edificación circular, está ubicada en el sector de la Mariscal, el Centro Comercial
+                    Espiral de la avenida Río Amazonas y calle Jorge Washington, es el primer centro comercial
+                    construido en Quito en 1980, tiene 163 locales comerciales y un corredor circular ascendente.
+                    Si conocemos que su diámetro aproximado es de 37 metros. Calcula su área.</span>
+                    <br><br>
+                    <textarea  class="form-control text-question no-redimensionar " cols="60" rows="3" ></textarea><br>
+                <br><br>
+                
                 </div>              
                 </div>
             </div>
@@ -234,7 +219,7 @@
         <script src="js/calcularNotas.js"></script>
         <script src="js/mathquillNOTEDITABLE.js"></script>
         <script src="js/mathCalc.js"></script>
-        <script src="js/actividad20.js"></script>
+        <script src="js/actividad51.js"></script>
         
         
 </body>
