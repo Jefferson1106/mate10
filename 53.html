@@ -57,6 +57,11 @@
         font-weight: 700;
     }
 
+    .subrayar {
+        text-decoration: underline;
+
+    }
+
     .bg_palabra {
         background-color: #F9E8B2;
         border-radius: 8px;
@@ -81,6 +86,9 @@
         clear: inherit;
     }
 
+    #activity label {
+        font-size: 15px
+    }
 
 
     @media (max-width: 770px) {
@@ -96,7 +104,14 @@
         <button type="button" class="close" onclick="cerrar_ayuda()" aria-label="Close"><span class="glyphicon glyphicon-remove-sign"
                 aria-hidden="true"></span></button>
         <!--ACA ESCRIBIR TEXTO DE LA AYUDA DE LA ACTIVIDAD-->
-        Extrae los valores que sean posibles y escribe la respuesta correcta en los recuadros.
+        1. Arrastra los objetos hacia el cuadro de la izquierda que corresponda su equivalencia.<br>
+        2. Marque con una X  dentro de los recuadros.<br>
+        5. Escribe la letra que corresponde dentro del recuadro de acuerdo al gráfico.<br>
+        7. Escriba la respuesta en los recuadros de la derecha.<br>
+        8. Escriba la respuesta en los recuadros de la derecha.<br>
+        9. Escriba la respuesta en los recuadros de la derecha.<br>
+        10. Escriba la respuesta en los recuadros de la derecha.<br>
+        11. Escriba la respuesta en los recuadros de la derecha.<br>
         <br>
         <span id="ayudas"></span>
     </div>
@@ -137,7 +152,7 @@
                     </button>
                 </li>
                 <li>
-                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="NotaFinal();">
+                    <button class="btn button button_3 btnCalificar mytooltip" data-info="Calificar / Comprobar" id="bt_comprobar" onclick="NotaFinal()">
                         <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
                     </button>
                 </li>
@@ -222,23 +237,259 @@
                     </tr>
                 </table>
                 <div class="text-question">
-                        <input  type="number" maxlength="2" size="2" style="text-align:center" class="nota-abierta" min="0" max="1" id="pre3a">
-                        &nbsp;<span><b>3. Determina </b> la veracidad de los siguientes enunciados con una V para verdadero y
-                        con una F para falso. Justifica tu respuesta en el caso de los  planteamientos que consideres falsos.</span><br><br>
+                    <input type="text" maxlength="4" size="2" style="text-align:center" class="nota-abierta" min="0" max="1" id="pre3a">                    &nbsp;
+                    <span><b>3. Determina </b> la veracidad de los siguientes enunciados con una V para verdadero y con una
+                        F para falso. Justifica tu respuesta en el caso de los planteamientos que consideres falsos.</span><br><br>
                 </div>
-                
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span><label>Toda expresión radical es un número irracional.</label><input type="text" maxlength="1"  size="1" style="width:50px" onkeypress="return validar3(event)" ></span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<textarea  class="form-control text-question no-redimensionar " cols="60" rows="1" ></textarea><br>
-                    
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span><label>Dos ejemplos de números irracionales algebraicos son √3 y √2 .</label><input type="text" maxlength="1"  size="1" style="width:50px" onkeypress="return validar3(event)"></span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<textarea  class="form-control text-question no-redimensionar " cols="60" rows="1" ></textarea><br>
-                    
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span><label>Los números racionales se dividen en trascendentales y algebraicos.</label><input type="text" maxlength="1"  size="1" style="width:50px" onkeypress="return validar3(event)"></span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<textarea  class="form-control text-question no-redimensionar " cols="60" rows="1" ></textarea><br>
-                    
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span><label>Los números irracionales trascendentales se obtienen de funciones trascendentales.</label><input type="text" maxlength="1"  size="1" style="width:50px" onkeypress="return validar3(event)"></span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<textarea  class="form-control text-question no-redimensionar " cols="60" rows="1" ></textarea><br>
-                    
+
+                <table class="table">
+                    <tr>
+                        <td><span><b>a)</b></span></td>
+                        <td>
+                            <div class="col-lg-12  imagen3  " id="rantres1"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>b)</b></span></td>
+                        <td>
+                            <div class="col-lg-12  imagen3  " id="rantres2"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>c)</b></span></td>
+                        <td>
+                            <div class="col-lg-12  imagen3  " id="rantres3"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>d)</b></span></td>
+                        <td>
+                            <div class="col-lg-12  imagen3  " id="rantres4"></div>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="text-question">
+                    &nbsp;<span><b>4. Subraya </b> el valor que completa correctamente la idea de cada enunciado.</span><br><br>
+                </div>
+                <label>
+                    <table class="table">
+                        <tr>
+                            <td><span><b>a)</b></span></td>
+                            <td>
+                                <div class="col-lg-12  imagen4  " id="rancuatro1"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span><b>b)</b></span></td>
+                            <td>
+                                <div class="col-lg-12  imagen4  " id="rancuatro2"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span><b>c)</b></span></td>
+                            <td>
+                                <div class="col-lg-12  imagen4  " id="rancuatro3"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </label>
+                <div class="text-question">
+                    <span><b>5. Ubica </b> en la recta numérica los siguientes valores y <b>compara</b> la respuesta con
+                        tu compañero.</span><br><br>
+                </div>
+                <img class="img-responsive" src="img/i1_p38_act5.jpg"><br>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="col-lg-12  imagen5  " id="rancinco1"></div>
+                        </td>
+                        <td>
+                            <div class="col-lg-12  imagen5  " id="rancinco2"></div>
+                        </td>
+                        <td>
+                            <div class="col-lg-12  imagen5  " id="rancinco3"></div>
+                        </td>
+                        <td>
+                            <div class="col-lg-12  imagen5  " id="rancinco4"></div>
+                        </td>
+                        <td>
+                            <div class="col-lg-12  imagen5  " id="rancinco5"></div>
+                        </td>
+                        <td>
+                            <div class="col-lg-12  imagen5  " id="rancinco6"></div>
+                        </td>
+                        <td>
+                            <div class="col-lg-12  imagen5  " id="rancinco7"></div>
+                        </td>
+                        <td>
+                            <div class="col-lg-12  imagen5  " id="rancinco8"></div>
+                        </td>
+                        <td>
+                            <div class="col-lg-12  imagen5  " id="rancinco9"></div>
+                        </td>
+                    </tr>
+                </table><br>
+
+                <div class="text-question">
+                    <span><b>6. Subraya </b> la respuesta correcta con ayuda de la gráfica del ejercicio anterior.</span><br><br>
+                </div>
+                <label>
+                    <table class="table">
+                        <tr>
+                            <td><span><b>a)</b></span></td>
+                            <td>
+                                <div class="col-lg-12  imagen6  " id="ranseis1"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span><b>b)</b></span></td>
+                            <td>
+                                <div class="col-lg-12  imagen6  " id="ranseis2"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span><b>c)</b></span></td>
+                            <td>
+                                <div class="col-lg-12  imagen6  " id="ranseis3"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span><b>d)</b></span></td>
+                            <td>
+                                <div class="col-lg-12  imagen6  " id="ranseis4"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span><b>e)</b></span></td>
+                            <td>
+                                <div class="col-lg-12  imagen6  " id="ranseis5"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span><b>f)</b></span></td>
+                            <td>
+                                <div class="col-lg-12  imagen6  " id="ranseis6"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </label>
+                <div class="text-question">
+                    <span><b>7. Representa </b> el resultado en notación científica.</span><br><br>
+                </div>
+
+                <label>
+                    <table class="table">
+                        <tr>
+                            <td><span><b>a)</b></span></td>
+                            <td>
+                                <div class="col-lg-12  imagen7  " id="ransiete1"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span><b>b)</b></span></td>
+                            <td>
+                                <div class="col-lg-12  imagen7  " id="ransiete2"></div>
+
+                            </td>
+                        </tr>
+
+                    </table>
+                </label>
+                <div class="text-question">
+                    <span><b>8. Opera </b> para reducir términos semejantes.</span><br><br>
+                </div>
+
+                <table class="table">
+                    <tr>
+                        <td><span><b>a)</b></span></td>
+                        <td>
+                            <img src="img/i1_p39_act8.jpg">
+                            <label>=  ​√(</label><input type="text" maxlength="2" style="width:25px" id="cocho1"><label>)</label>
+                            <input type="text" maxlength="1" style="width:15px" id="cocho2">&nbsp;<input type="text" maxlength="2"
+                                style="width:15px" id="cocho3">
+                            <label>​√(</label><input type="text" maxlength="1" style="width:15px" id="cocho4"><label>)</label>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <div class="text-question">
+                    <span><b>9. Reduce </b> la siguiente expresión.</span><br><br>
+                </div>
+
+                <table class="table">
+                    <tr>
+                        <td><span><b>a)</b></span></td>
+                        <td>
+                            <img src="img/i1_p39_act9.jpg">
+                            <label>=</label><sup><input type="text" maxlength="2" style="width:15px" id="cnueve1"></sup>
+                            <label>​√(</label><input type="text" maxlength="2" style="width:25px" id="cnueve2"><label>)</label>
+                        </td>
+                    </tr>
+
+                </table>
+                <div class="text-question">
+                    <span><b>10. Calcula </b> el valor reducido y compara la respuesta con tu compañero.</span><br><br>
+                </div>
+
+                <table class="table">
+                    <tr>
+                        <td><span><b>a)</b></span></td>
+                        <td>
+                            <img src="img/i1_p39_act10.jpg">
+                            <label>=</label><input type="text" maxlength="2" style="width:30px" id="cdiez1">
+                            <label>​ /&nbsp;</label><input type="text" maxlength="2" style="width:30px" id="cdiez2"><label></label>
+                        </td>
+                    </tr>
+
+                </table>
+                <div class="text-question">
+                    <span><b>11. Reduce </b> a una sola raíz y compara el resultado con tu compañero.</span><br><br>
+                </div>
+
+                <label>
+                    <table class="table">
+                        <tr>
+                            <td><span><b>a)</b></span></td>
+                            <td>
+                                <div class="col-lg-12  imagen11  " id="ranonce1"></div>
+                                                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span><b>b)</b></span></td>
+                            <td>
+                                <div class="col-lg-12  imagen11  " id="ranonce2"></div>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span><b>c)</b></span></td>
+                            <td>
+                                <div class="col-lg-12  imagen11  " id="ranonce3"></div>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span><b>d)</b></span></td>
+                            <td>
+                                <div class="col-lg-12  imagen11  " id="ranonce4"></div>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span><b>e)</b></span></td>
+                            <td>
+                                <div class="col-lg-12  imagen11  " id="ranonce5"></div>
+                                
+                            </td>
+                        </tr>
+
+                    </table>
+                </label>
+
+
 
 
             </div>
