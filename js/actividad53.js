@@ -1,5 +1,5 @@
 var titulos = "refuerzo";
-numero_pagina(39);
+numero_pagina(38);
 
 function validarN(e) {
   tecla = document.all ? e.keyCode : e.which;
@@ -425,7 +425,7 @@ for (i = 0; i < rantres.length; i++) {
 function pregunta3() {
   var pre3a = document.getElementById("pre3a").value;
   if (pre3a == "") {
-    alert("Califique todas las preguntas abiertas !");
+    tpre3 = 0;  
   } else {
     if (pre3a > 1) {
         tpre3 = 0;  
@@ -1072,6 +1072,14 @@ function pregunta11()
 // #endregion
 // #region Calculo Nota Final
 function NotaFinal() {
+
+  var pre3a = document.getElementById("pre3a").value;
+  if(pre3a=="")
+  {
+    alert("Califiqué todas las preguntas");
+  }
+  else
+  {   
   pregunta1();
   pregunta2();
   pregunta3();
@@ -1099,6 +1107,7 @@ function NotaFinal() {
   var Vtotal=((Nf*10)/11).toFixed(2);
   $("#txtNota").html(Vtotal);
   document.getElementById("bt_comprobar").disabled = true;
+}
 }
 
 // #endregion
