@@ -304,7 +304,27 @@ function pregunta4() {
 // #endregion
 
 // #region Pregunta5
+function pregunta5() {
+  var cor = 0;
+  var inc = 0;
 
+  var cj5a = document.getElementById("cj5a").value;
+  if (cj5a == "341,33") {
+    cor = cor + 1;
+    $("#cj5a").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj5a").addClass("incorrecto");
+  }
+
+  var total = ((cor ) * 2) / 1;
+  if (total < 0) {
+    total = 0;
+    tpre5 = total.toFixed(2);
+  } else {
+    tpre5 = total.toFixed(2);
+  }
+  }
 // #endregion
 
 // #region Calculo Nota Final
@@ -314,11 +334,13 @@ if(pre1=="")
 {
     alert("Califiqué todas la preguntas");
 }
+else
 {    
   pregunta1();
   pregunta2();
   pregunta3();
   pregunta4();
+  pregunta5();
 
   var Nf =
     parseFloat(tpre1) +
