@@ -45,18 +45,6 @@
         background: #fff;
     }
 
-    .correcto {
-        color: #ffffff;
-        background-color: #8FB435;
-        font-weight: 700;
-    }
-
-    .incorrecto {
-        color: #ffffff;
-        background-color: #E76E80;
-        font-weight: 700;
-    }
-
     .bg_palabra {
         background-color: #F9E8B2;
         border-radius: 8px;
@@ -103,7 +91,6 @@
     }
 
 
-
     .base {
         width: 60px;
         background-color: #99ccff;
@@ -114,6 +101,60 @@
     .periodo {
         border-top: 2px solid;
         border-radius: 50%
+    }
+
+    .seleccionCaja {
+        background-color: #58D68D;
+        color: white;
+        width: 100px;
+    }
+
+    .deseleccionCaja {
+        background-color: white;
+        color: black;
+    }
+
+    .correcto {
+        color: #ffffff;
+        background-color: #8FB435;
+        font-weight: 700;
+    }
+
+    .incorrecto {
+        color: #ffffff;
+        background-color: #E76E80;
+        font-weight: 700;
+    }
+
+    .seleccionCajai {
+        background-color: #ffffff;
+        color: white;
+
+        width: 15%;
+        height: 115px;
+        border: 10px rgb(34, 197, 29) solid;
+        border-radius: 25px;
+        padding: 10px;
+        margin: 5px;
+
+    }
+
+    .correctoi {
+        width: 15%;
+        height: 115px;
+        border: 10px rgb(34, 197, 29) solid;
+        border-radius: 25px;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .incorrectoi {
+        width: 15%;
+        height: 115px;
+        border: 10px rgb(231, 16, 16) solid;
+        border-radius: 25px;
+        padding: 10px;
+        margin: 5px;
     }
 </style>
 
@@ -228,18 +269,14 @@
                         <td><span><b>a)</b></span></td>
                         <td>
                             <div class="col-lg-12  imagen2  " id="randos1"></div>
-                            <label>√(2)</label><input type="text" maxlength="1" style="width:30px" id="cj2a">
-                            <sup>3</sup><label>√(5)</label><input type="text" maxlength="1" style="width:30px" id="cj2b">
-                            <img src="img/i1_p50_act2.jpg">
+
                         </td>
                     </tr>
                     <tr>
                         <td><span><b>b)</b></span></td>
                         <td>
                             <div class="col-lg-12  imagen2  " id="randos2"></div>
-                            <label>2π</label><input type="text" maxlength="1" style="width:30px" id="cj2c">
-                            <label>6,28</label><input type="text" maxlength="1" style="width:30px" id="cj2d">
-                            <img src="img/i2_p50_act2.jpg">
+
                         </td>
                     </tr>
                     <tr>
@@ -247,18 +284,13 @@
                         <td>
 
                             <div class="col-lg-12  imagen2  " id="randos3"></div>
-                            <label>En la gráfica:</label>
-                            <img class="img-responsive" src="img/i3_p50_act2.jpg">
-                            <label>x</label><input type="text" maxlength="1" style="width:30px" id="cj2e"><label>8</label>
                         </td>
                     </tr>
                     <tr>
                         <td><span><b>d)</b></span></td>
                         <td>
-                            <label>En el intervalo x ∈ [− 2; 15]</label>
+
                             <div class="col-lg-12  imagen2  " id="randos4"></div><br>
-                            <label>i)</label> <label>x</label><input type="text" maxlength="1" style="width:30px" id="cj2f"><label>-2</label><br>
-                            <label>ii)</label><label>x</label><input type="text" maxlength="1" style="width:30px" id="cj2g"><label>15</label>
                         </td>
                     </tr>
                 </table>
@@ -266,7 +298,7 @@
                 <div class="text-question">
                     <input type="text" maxlength="4" size="2" style="text-align:center" class="nota-abierta" min="0" max="1" id="pre3a">                    &nbsp;
                     <span><b>3. Determina </b> cuáles de los siguientes enunciados son verdaderos y cuáles son falsos. Justifica
-                        tus respuestas en el caso de los planteamientos que consideres falsos. </div>
+                        tus respuestas en el caso de los planteamientos que consideres falsos. </div><br>
 
                 <label>
                     <table class="table">
@@ -274,18 +306,12 @@
                             <td><span><b>a)</b></span></td>
                             <td>
                                 <div class="col-lg-12  imagen3  " id="rantres1"></div>
-                                <span><img src="img/i1_p50_act3.jpg">
-                                    <input type="text" maxlength="1" size="1" style="width:50px" onkeypress="return validar3(event)"></span><textarea
-                                    class="form-control text-question no-redimensionar " cols="60" rows="1"></textarea>
                             </td>
                         </tr>
                         <tr>
                             <td><span><b>b)</b></span></td>
                             <td>
                                 <div class="col-lg-12  imagen3  " id="rantres2"></div>
-                                <span><img src="img/i2_p50_act3.jpg">
-                                    <input type="text" maxlength="1" size="1" style="width:50px" onkeypress="return validar3(event)"></span><textarea
-                                    class="form-control text-question no-redimensionar " cols="60" rows="1"></textarea>
 
                             </td>
                         </tr>
@@ -293,9 +319,6 @@
                             <td><span><b>c)</b></span></td>
                             <td>
                                 <div class="col-lg-12  imagen3  " id="rantres3"></div>
-                                <span><img src="img/i3_p50_act3.jpg">
-                                    <input type="text" maxlength="1" size="1" style="width:50px" onkeypress="return validar3(event)"></span><textarea
-                                    class="form-control text-question no-redimensionar " cols="60" rows="1"></textarea>
 
                             </td>
                         </tr>
@@ -303,9 +326,6 @@
                             <td><span><b>d)</b></span></td>
                             <td>
                                 <div class="col-lg-12  imagen3  " id="rantres4"></div>
-                                <span><img src="img/i4_p50_act3.jpg">
-                                    <input type="text" maxlength="1" size="1" style="width:50px" onkeypress="return validar3(event)"></span><textarea
-                                    class="form-control text-question no-redimensionar " cols="60" rows="1"></textarea>
 
                             </td>
                         </tr>
@@ -313,16 +333,195 @@
                             <td><span><b>e)</b></span></td>
                             <td>
                                 <div class="col-lg-12  imagen3  " id="rantres5"></div>
-                                <span><img src="img/i5_p50_act3.jpg">
-                                    <input type="text" maxlength="1" size="1" style="width:50px" onkeypress="return validar3(event)"></span><textarea
-                                    class="form-control text-question no-redimensionar " cols="60" rows="1"></textarea>
 
                             </td>
                         </tr>
                     </table>
                 </label>
                 <div class="text-question">
-                       <span>5. Determina Al simplificar el radical <img src="img/i1_p50_act4.jpg"> se obtiene:</div>
+                    <span><b>4.</b> Determina Al simplificar el radical <img src="img/i1_p50_act4.jpg"> se obtiene:</div><br>
+                <table class="table">
+                    <tr>
+                        <td><span><b>a)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen4 enc " id="rancuatro1"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>b)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen4 enc " id="rancuatro2"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>c)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen4 enc " id="rancuatro3"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>d)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen4 enc " id="rancuatro4"></div>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="text-question">
+                    <span><b>5. Calcula y expresa</b> el resultado en la forma más simple posible:</div><br>
+                <table class="table">
+                    <tr>
+                        <td><span><b>a)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen5 " id="rancinco1"></div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>b)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen5 " id="rancinco2"></div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>c)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen5 " id="rancinco3"></div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>d)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen5 " id="rancinco4"></div>
+
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="text-question">
+                    <span><b>6. </b>Al simplificar la expresión <img src="img/i1_p50_act6.jpg">, se obtiene:</div><br>
+                <table class="table">
+                    <tr>
+                        <td><span><b>a)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen6 enc1 " id="ranseis1"></div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>b)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen6 enc1 " id="ranseis2"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>c)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen6 enc1 " id="ranseis3"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>d)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen6 enc1 " id="ranseis4"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>e)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen6 enc1 " id="ranseis5"></div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="text-question">
+                    <span><b>7. </b>Al simplificar la expresión <img src="img/i1_p50_act7.jpg">, se obtiene:</div><br>
+                <table class="table">
+                    <tr>
+                        <td><span><b>a)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen7 enc2 " id="ransiete1"></div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>b)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen7 enc2 " id="ransiete2"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>c)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen7 enc2 " id="ransiete3"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>d)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen7 enc2 " id="ransiete4"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>e)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen7 enc2 " id="ransiete5"></div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="text-question">
+                    <input type="text" maxlength="4" size="2" style="text-align:center" class="nota-abierta" min="0" max="1" id="pre8a">                    &nbsp;
+                    <span><b>8. Reduce</b> tanto como sea posible:</div><br>
+                <table class="table">
+                    <tr>
+                        <td><span><b>a)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen8 " id="ranocho1"></div>
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>b)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen8 " id="ranocho2"></div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>c)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen8 " id="ranocho3"></div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="text-question">
+                    <input type="text" maxlength="4" size="2" style="text-align:center" class="nota-abierta" min="0" max="1" id="pre9a">                    &nbsp;
+                    <span><b>9. Calcula</b> y expresa el resultado en la forma más simple posible:</div><br>
+                <table class="table">
+                    <tr>
+                        <td><span><b>a)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen9 " id="rannueve1"></div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span><b>b)</b></span></td>
+                        <td>
+                            <div class="col-lg-12 imagen9 " id="rannueve2"></div>
+
+                        </td>
+                    </tr>
+                </table>
+                <div class="text-question">
+                    <input type="text" maxlength="4" size="2" style="text-align:center" class="nota-abierta" min="0" max="1" id="pre9a">                    &nbsp;
+                    <span><b>10. </b> En la figura, se sabe que D es el punto medio del segmento AB y el triángulo ABC es
+                        rectángulo en B. Además, C‾D = 13 cm y B‾ C = 12 cm.</div><br>
+
+
+
             </div>
         </div>
     </div>
