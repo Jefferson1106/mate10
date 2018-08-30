@@ -1,4 +1,4 @@
-var titulos = "aplico";
+var titulos = "preparo";
 numero_pagina(50);
 
 function validarN(e) {
@@ -38,7 +38,7 @@ document.getElementById("pre9a").addEventListener("keypress", () => {
   validNumero(0, 1, 1);
 });
 document.getElementById("pre9a").addEventListener("keyup", () => {
-  validMaxIngreso(document.getElementById("pre9a"), 0.75);
+  validMaxIngreso(document.getElementById("pre9a"), 1);
 });
 
 var tpre1 = 0;
@@ -396,7 +396,7 @@ function pregunta4() {
     parseInt(respri3) +
     parseInt(respri4);
 
-  var totalR = (suma * 0.75) / 1;
+  var totalR = (suma * 1) / 1;
   if (totalR < 0) {
     tpre4 = 0;
   } else {
@@ -577,10 +577,10 @@ function pregunta5() {
     $("#cj5n").addClass("incorrecto");
   }
 
-  var total = ((cor - inc) * 0.75) / 14;
+  var total = ((cor - inc) * 1) / 14;
   if (total < 0) {
     total = 0;
-    tpre5 = total.toFixed(5);
+    tpre5 = total.toFixed(2);
   } else {
     tpre5 = total.toFixed(2);
   }
@@ -712,7 +712,7 @@ function pregunta6() {
     parseInt(respri4) +
     parseInt(respri5);
 
-  var totalR = (suma * 0.75) / 1;
+  var totalR = (suma * 1) / 1;
   if (totalR < 0) {
     tpre6 = 0;
   } else {
@@ -921,12 +921,22 @@ function pregunta9() {
 }
 // #endregion
 
+// #region Pregunta10
+function pregunta10() {
+  var pre10a = document.getElementById("pre10a").value;
+  
+      tpre10 = pre10a;
+   
+}
+// #endregion
+
 // #region Calculo Nota Final
 function NotaFinal() {
   var pre3a = document.getElementById("pre3a").value;
   var pre8a = document.getElementById("pre8a").value;
   var pre9a = document.getElementById("pre9a").value;
-  if (pre3a == "" || pre8a == "" || pre9a=="") {
+  var pre10a = document.getElementById("pre10a").value;
+  if (pre3a == "" || pre8a == "" || pre9a=="" || pre10a=="") {
     alert("Califiqué todas las preguntas");
   } else {
     pregunta1();
@@ -937,6 +947,8 @@ function NotaFinal() {
     pregunta6();
     pregunta7();
     pregunta8();
+    pregunta9();
+    pregunta10();
 
     var Nf =
       parseFloat(tpre1) +
@@ -946,7 +958,9 @@ function NotaFinal() {
       parseFloat(tpre5) +
       parseFloat(tpre6) +
       parseFloat(tpre7) +
-      parseFloat(tpre8);
+      parseFloat(tpre8) +
+      parseFloat(tpre9) +
+      parseFloat(tpre10) ;
     var Vtotal = Nf.toFixed(2);
     $("#txtNota").html(Vtotal);
     document.getElementById("bt_comprobar").disabled = true;
