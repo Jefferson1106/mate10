@@ -307,32 +307,452 @@ function pregunta3() {
   }
 // #endregion
 
-// #region Random3
+// #region Pregunta4
+function pregunta4() {
+  var cor = 0;
+  var inc = 0;
 
+  var cj4a = document.getElementById("cj4a").value;
+  var cj4b = document.getElementById("cj4b").value;
+
+  if (cj4a == "a") {
+    cor = cor + 1;
+    $("#cj4a").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj4a").addClass("incorrecto");
+  }
+
+  if (cj4b == "ab") {
+    cor = cor + 1;
+    $("#cj4b").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj4b").addClass("incorrecto");
+  }
+
+  var total = ((cor) * 1) / 2;
+  if (total < 0) {
+    total = 0;
+    tpre4 = total.toFixed(2);
+  } else {
+    tpre4 = total.toFixed(2);
+  }
+}
 // #endregion
 
 // #region Pregunta5
+function pregunta5() {
+  var cor = 0;
+  var inc = 0;
 
+  var cj5a = document.getElementById("cj5a").value;
+  var cj5b = document.getElementById("cj5b").value;
+
+  if (cj5a == "1,6002") {
+    cor = cor + 1;
+    $("#cj5a").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj5a").addClass("incorrecto");
+  }
+
+  if (cj5b == "4") {
+    cor = cor + 1;
+    $("#cj5b").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj5b").addClass("incorrecto");
+  }
+
+  var total = ((cor) * 1) / 2;
+  if (total < 0) {
+    total = 0;
+    tpre5 = total.toFixed(2);
+  } else {
+    tpre5 = total.toFixed(2);
+  }
+}
 // #endregion
 
 // #region Random6
+var random6 = [
+  [
+    '<img src="img/i2_p52_act6.jpg">'+
+    '<label>R=</label><input type="text" maxlength="1" size="1" style="width:30px" id="cj6d">'+
+    '<label><</label><input type="text" maxlength="1" size="1" style="width:30px" id="cj6e">'+
+    '<label><</label><input type="text" maxlength="1" size="1" style="width:30px" id="cj6f">'
+  ],
+  [
+    '<img src="img/i1_p52_act6.jpg">'+
+    '<label>R=</label><input type="text" maxlength="1" size="1" style="width:30px" id="cj6a">'+
+    '<label><</label><input type="text" maxlength="1" size="1" style="width:30px" id="cj6b">'+
+    '<label><</label><input type="text" maxlength="1" size="1" style="width:30px" id="cj6c">'
+  ],
+  [
+    '<img src="img/i3_p52_act6.jpg">'+
+    '<label>R=</label><input type="text" maxlength="1" size="1" style="width:30px" id="cj6g">'+
+    '<label><</label><input type="text" maxlength="1" size="1" style="width:30px" id="cj6h">'+
+    '<label><</label><input type="text" maxlength="1" size="1" style="width:30px" id="cj6i">'
+  ]
+];
 
+var ranseis = document.getElementsByClassName("imagen6");
+random6.sort(f_randomico);
+for (i = 0; i < ranseis.length; i++) {
+  $("#" + ranseis[i].id).html(
+    '<span width="50px">' + random6[i][0] + "</span> "
+  );
+}
 // #endregion
 
 // #region Pregunta6
+function pregunta6() {
+  var cor = 0;
+  var inc = 0;
 
+  var cj6a = document.getElementById("cj6a").value;
+  var cj6b = document.getElementById("cj6b").value;
+  var cj6c = document.getElementById("cj6c").value;
+  var cj6d = document.getElementById("cj6d").value;
+  var cj6e = document.getElementById("cj6e").value;
+  var cj6f = document.getElementById("cj6f").value;
+  var cj6g = document.getElementById("cj6g").value;
+  var cj6h = document.getElementById("cj6h").value;
+  var cj6i = document.getElementById("cj6i").value;
+
+  if (cj6a == "3") {
+    cor = cor + 1;
+    $("#cj6a").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj6a").addClass("incorrecto");
+  }
+
+  if (cj6b == "1") {
+    cor = cor + 1;
+    $("#cj6b").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj6b").addClass("incorrecto");
+  }
+  if (cj6c == "2") {
+    cor = cor + 1;
+    $("#cj6c").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj6c").addClass("incorrecto");
+  }
+  if (cj6d == "2") {
+    dor = cor + 1;
+    $("#cj6d").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj6d").addClass("incorrecto");
+  }
+  if (cj6e == "1") {
+    cor = cor + 1;
+    $("#cj6e").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj6e").addClass("incorrecto");
+  }
+  if (cj6f == "3") {
+    cor = cor + 1;
+    $("#cj6f").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj6f").addClass("incorrecto");
+  }
+  if (cj6g == "3") {
+    cor = cor + 1;
+    $("#cj6g").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj6g").addClass("incorrecto");
+  }
+  if (cj6h == "2") {
+    cor = cor + 1;
+    $("#cj6h").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj6h").addClass("incorrecto");
+  }
+  if (cj6i == "1") {
+    cor = cor + 1;
+    $("#cj6i").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj6i").addClass("incorrecto");
+  }
+
+  var total = ((cor) * 1) / 9;
+  if (total < 0) {
+    total = 0;
+    tpre6 = total.toFixed(2);
+  } else {
+    tpre6 = total.toFixed(2);
+  }
+}
+// #endregion
+
+// #region Random7
+var testimg1 = [
+  ["1", "img/i2_p52_act7.jpg"],
+  ["2", "img/i3_p52_act7.jpg"],
+  ["3", "img/i4_p52_act7.jpg"],
+  ["4", "img/i5_p52_act7.jpg"],
+  ["5", "img/i6_p52_act7.jpg"]
+];
+
+finitimg1();
+
+function finitimg1() {
+  var cajasImg = document.getElementsByClassName("imagen7");
+
+  testimg1.sort(f_randomico);
+  for (i = 0; i < cajasImg.length; i++) {
+    $("#" + cajasImg[i].id).html(
+      "<img id=" +
+        testimg1[i][1] +
+        ' class="img-responsive imgAcom" src="' +
+        testimg1[i][1] +
+        '">'
+    );
+  }
+}
 // #endregion
 
 // #region Pregunta7
 
+$(".enc2").click(function() {
+  if ($(this).hasClass("seleccionCajai")) {
+    $(this).removeClass("seleccionCajai");
+  } else {
+    $(this).addClass("seleccionCajai");
+  }
+});
+var respr1 = 0;
+var respr2 = 0;
+var respr3 = 0;
+var respr4 = 0;
+var respr5 = 0;
+var respri1 = 0;
+var respri2 = 0;
+var respri3 = 0;
+var respri4 = 0;
+var respri5 = 0;
+
+function pregunta7() {
+  var CorrectasP = [["1", "img/i2_p52_act7.jpg"]];
+  var caja1 = $("div[id=ransiete1]").find("img")[0].id;
+  if ($("#ransiete1").hasClass("seleccionCajai")) {
+    if (caja1 == "img/i2_p52_act7.jpg") {
+      respr1 = 1;
+      $("#ransiete1").addClass("correctoi");
+    } else {
+      respri1 = 1;
+      $("#ransiete1").addClass("incorrectoi");
+    }
+  } else {
+    respr1 = 0;
+  }
+
+  var caja2 = $("div[id=ransiete2]").find("img")[0].id;
+  if ($("#ransiete2").hasClass("seleccionCajai")) {
+    if (caja2 == "img/i2_p52_act7.jpg") {
+      respr2 = 1;
+      $("#ransiete2").addClass("correctoi");
+    } else {
+      respri2 = 1;
+      $("#ransiete2").addClass("incorrectoi");
+    }
+  } else {
+    respr2 = 0;
+  }
+
+  var caja3 = $("div[id=ransiete3]").find("img")[0].id;
+  if ($("#ransiete3").hasClass("seleccionCajai")) {
+    if (caja3 == "img/i2_p52_act7.jpg") {
+      respr3 = 1;
+      $("#ransiete3").addClass("correctoi");
+    } else {
+      respri3 = 1;
+      $("#ransiete3").addClass("incorrectoi");
+    }
+  } else {
+    respr3 = 0;
+  }
+  var caja4 = $("div[id=ransiete4]").find("img")[0].id;
+  if ($("#ransiete4").hasClass("seleccionCajai")) {
+    if (caja4 == "img/i2_p52_act7.jpg") {
+      respr4 = 1;
+      $("#ransiete4").addClass("correctoi");
+    } else {
+      respri4 = 1;
+      $("#ransiete4").addClass("incorrectoi");
+    }
+  } else {
+    respr4 = 0;
+  }
+  var caja5 = $("div[id=ransiete5]").find("img")[0].id;
+  if ($("#ransiete5").hasClass("seleccionCajai")) {
+    if (caja5 == "img/i2_p52_act7.jpg") {
+      respr5 = 1;
+      $("#ransiete5").addClass("correctoi");
+    } else {
+      respri5 = 1;
+      $("#ransiete5").addClass("incorrectoi");
+    }
+  } else {
+    respr5 = 0;
+  }
+
+  var suma =
+    parseInt(respr1) + parseInt(respr2) + parseInt(respr3) + parseInt(respr4)+ parseInt(respr5);
+  var sumai =
+    parseInt(respri1) +
+    parseInt(respri2) +
+    parseInt(respri3) +
+    parseInt(respri4) +
+    parseInt(respri5); 
+
+  var totalR = (suma * 1) / 1;
+  if (totalR < 0) {
+    tpre7 = 0;
+  } else {
+    tpre7 = totalR;
+  }
+}
 // #endregion
 
 // #region Random8
+var testimg2 = [
+  ["1", "img/i2_p52_act8.jpg"],
+  ["2", "img/i3_p52_act8.jpg"],
+  ["3", "img/i4_p52_act8.jpg"],
+  ["4", "img/i5_p52_act8.jpg"],
+  ["5", "img/i6_p52_act8.jpg"]
+];
 
+finitimg2();
+
+function finitimg2() {
+  var cajasImg = document.getElementsByClassName("imagen8");
+
+  testimg2.sort(f_randomico);
+  for (i = 0; i < cajasImg.length; i++) {
+    $("#" + cajasImg[i].id).html(
+      "<img id=" +
+        testimg2[i][1] +
+        ' class="img-responsive imgAcom" src="' +
+        testimg2[i][1] +
+        '">'
+    );
+  }
+}
 // #endregion
 
 // #region Pregunta8
+$(".enc3").click(function() {
+  if ($(this).hasClass("seleccionCajai")) {
+    $(this).removeClass("seleccionCajai");
+  } else {
+    $(this).addClass("seleccionCajai");
+  }
+});
+var respr1 = 0;
+var respr2 = 0;
+var respr3 = 0;
+var respr4 = 0;
+var respr5 = 0;
+var respri1 = 0;
+var respri2 = 0;
+var respri3 = 0;
+var respri4 = 0;
+var respri5 = 0;
 
+function pregunta7() {
+  var CorrectasP = [["1", "img/i4_p52_act8.jpg"]];
+  var caja1 = $("div[id=ranocho1]").find("img")[0].id;
+  if ($("#ranocho1").hasClass("seleccionCajai")) {
+    if (caja1 == "img/i4_p52_act8.jpg") {
+      respr1 = 1;
+      $("#ranocho1").addClass("correctoi");
+    } else {
+      respri1 = 1;
+      $("#ranocho1").addClass("incorrectoi");
+    }
+  } else {
+    respr1 = 0;
+  }
+
+  var caja2 = $("div[id=ranocho2]").find("img")[0].id;
+  if ($("#ranocho2").hasClass("seleccionCajai")) {
+    if (caja2 == "img/i4_p52_act8.jpg") {
+      respr2 = 1;
+      $("#ranocho2").addClass("correctoi");
+    } else {
+      respri2 = 1;
+      $("#ranocho2").addClass("incorrectoi");
+    }
+  } else {
+    respr2 = 0;
+  }
+
+  var caja3 = $("div[id=ranocho3]").find("img")[0].id;
+  if ($("#ranocho3").hasClass("seleccionCajai")) {
+    if (caja3 == "img/i4_p52_act8.jpg") {
+      respr3 = 1;
+      $("#ranocho3").addClass("correctoi");
+    } else {
+      respri3 = 1;
+      $("#ranocho3").addClass("incorrectoi");
+    }
+  } else {
+    respr3 = 0;
+  }
+  var caja4 = $("div[id=ranocho4]").find("img")[0].id;
+  if ($("#ranocho4").hasClass("seleccionCajai")) {
+    if (caja4 == "img/i4_p52_act8.jpg") {
+      respr4 = 1;
+      $("#ranocho4").addClass("correctoi");
+    } else {
+      respri4 = 1;
+      $("#ranocho4").addClass("incorrectoi");
+    }
+  } else {
+    respr4 = 0;
+  }
+  var caja5 = $("div[id=ranocho5]").find("img")[0].id;
+  if ($("#ranocho5").hasClass("seleccionCajai")) {
+    if (caja5 == "img/i4_p52_act8.jpg") {
+      respr5 = 1;
+      $("#ranocho5").addClass("correctoi");
+    } else {
+      respri5 = 1;
+      $("#ranocho5").addClass("incorrectoi");
+    }
+  } else {
+    respr5 = 0;
+  }
+
+  var suma =
+    parseInt(respr1) + parseInt(respr2) + parseInt(respr3) + parseInt(respr4)+ parseInt(respr5);
+  var sumai =
+    parseInt(respri1) +
+    parseInt(respri2) +
+    parseInt(respri3) +
+    parseInt(respri4) +
+    parseInt(respri5); 
+
+  var totalR = (suma * 1) / 1;
+  if (totalR < 0) {
+    tpre8 = 0;
+  } else {
+    tpre8 = totalR;
+  }
+}
 // #endregion
 
 // #region Random9
@@ -356,7 +776,10 @@ function NotaFinal() {
     pregunta1();
     pregunta2();
     pregunta3();
-
+    pregunta4();
+    pregunta5();
+    pregunta6();
+    pregunta7();
     var Nf =
       parseFloat(tpre1) +
       parseFloat(tpre2) +
