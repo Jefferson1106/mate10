@@ -28,6 +28,14 @@ document.getElementById("pre1a").addEventListener("keyup", () => {
   validMaxIngreso(document.getElementById("pre1a"), 0.50);
 });
 
+
+document.getElementById("pre9a").addEventListener("keypress", () => {
+  validNumero(0, 1, 1);
+});
+document.getElementById("pre9a").addEventListener("keyup", () => {
+  validMaxIngreso(document.getElementById("pre9a"), 1);
+});
+
 var tpre1 = 0;
 var tpre2 = 0;
 var tpre3 = 0;
@@ -123,7 +131,7 @@ $(".enc1").click(function() {
     var CorrectasP = [["1", "img/i4_p52_act2.jpg"]];
     var caja1 = $("div[id=randos1]").find("img")[0].id;
     if ($("#randos1").hasClass("seleccionCajai")) {
-      if (caja1 == "img/i4_p52_act2.jpg") {
+      if (caja1 == "img/i4_p52_act2.jpg"  || caja1 == "img/i2_p52_act2.jpg" ) {
         respr1 = 1;
         $("#randos1").addClass("correctoi");
       } else {
@@ -136,7 +144,7 @@ $(".enc1").click(function() {
   
     var caja2 = $("div[id=randos2]").find("img")[0].id;
     if ($("#randos2").hasClass("seleccionCajai")) {
-      if (caja2 == "img/i4_p52_act2.jpg") {
+      if (caja2 == "img/i4_p52_act2.jpg" || caja2 == "img/i2_p52_act2.jpg") {
         respr2 = 1;
         $("#randos2").addClass("correctoi");
       } else {
@@ -149,7 +157,7 @@ $(".enc1").click(function() {
   
     var caja3 = $("div[id=randos3]").find("img")[0].id;
     if ($("#randos3").hasClass("seleccionCajai")) {
-      if (caja3 == "img/i4_p52_act2.jpg") {
+      if (caja3 == "img/i4_p52_act2.jpg" || caja3 == "img/i2_p52_act2.jpg") {
         respr3 = 1;
         $("#randos3").addClass("correctoi");
       } else {
@@ -161,7 +169,7 @@ $(".enc1").click(function() {
     }
     var caja4 = $("div[id=randos4]").find("img")[0].id;
     if ($("#randos4").hasClass("seleccionCajai")) {
-      if (caja4 == "img/i4_p52_act2.jpg") {
+      if (caja4 == "img/i4_p52_act2.jpg" || caja4 == "img/i2_p52_act2.jpg") {
         respr4 = 1;
         $("#randos4").addClass("correctoi");
       } else {
@@ -672,7 +680,7 @@ var respri3 = 0;
 var respri4 = 0;
 var respri5 = 0;
 
-function pregunta7() {
+function pregunta8() {
   var CorrectasP = [["1", "img/i4_p52_act8.jpg"]];
   var caja1 = $("div[id=ranocho1]").find("img")[0].id;
   if ($("#ranocho1").hasClass("seleccionCajai")) {
@@ -756,21 +764,254 @@ function pregunta7() {
 // #endregion
 
 // #region Random9
+var random9 = [
+  [
+    '<img src="img/i2_p53_act9.jpg"><br><br>'+
+    '<textarea class="form-control text-question no-redimensionar " cols="80" rows="3"></textarea>'
+  ],
+  [
+    '<img src="img/i3_p53_act9.jpg"><br><br>'+
+    '<textarea class="form-control text-question no-redimensionar " cols="80" rows="3"></textarea>'
+  ],
+  [
+    '<img src="img/i1_p53_act9.jpg"><br><br>'+
+    '<textarea class="form-control text-question no-redimensionar " cols="80" rows="3"></textarea>'
+  ],
+  [
+    '<img src="img/i4_p53_act9.jpg"><br><br>'+
+    '<textarea class="form-control text-question no-redimensionar " cols="80" rows="3"></textarea>'
+  ]
+];
 
+var rannueve = document.getElementsByClassName("imagen9");
+random9.sort(f_randomico);
+for (i = 0; i < rannueve.length; i++) {
+  $("#" + rannueve[i].id).html(
+    '<span width="50px">' + random9[i][0] + "</span> "
+  );
+}
 // #endregion
 
 // #region Pregunta9
+function pregunta9() {
+  var pre9a = document.getElementById("pre9a").value;
+  
+      tpre9 = pre9a;
+}
+// #endregion
 
+// #region Random10
+var ejer = 1,
+  itemsT = 4,
+  cont = 0,
+  tmp,
+  cor = 0,
+  inc = 0,
+  calificacion = 0.50,
+  claseAnimada = "animate bounceIn";
+var resp = [],
+  i;
+
+var pal1 = [
+  '<span class="bg_palabra c3">&nbsp;Ortocentro&nbsp;</span>',
+  '<span class="bg_palabra c4">&nbsp;Incentro&nbsp;</span>',
+  '<span class="bg_palabra c2">&nbsp;Circuncentro&nbsp;</span>',
+  '<span class="bg_palabra c1">&nbsp;Baricentro&nbsp;</span>'
+];
+var txt1 = [
+  '<tr><td><div class="cajas imagen c1" id="caja_img1"></div></td><td><div class="col-lg-6 col-md-6 col-sm-6 col-xs-7 cajas texto" id="caja_txt1">"Medianas"</div></td></tr>',
+  '<tr><td><div class="cajas imagen c2" id="caja_img2"></div></td><td><div class="col-lg-6 col-md-6 col-sm-6 col-xs-7 cajas texto" id="caja_txt2">"Mediatrices"</div></td></tr>',
+  '<tr><td><div class="cajas imagen c3" id="caja_img2"></div></td><td><div class="col-lg-6 col-md-6 col-sm-6 col-xs-7 cajas texto" id="caja_txt2">"Alturas"</div></td></tr>',
+  '<tr><td><div class="cajas imagen c4" id="caja_img3"></div></td><td><div class="col-lg-6 col-md-6 col-sm-6 col-xs-7 cajas texto" id="caja_txt3">“Bisectrices”</div></td></tr>'
+];
+pal1.sort(f_randomico);
+txt1.sort(f_randomico);
+$(".textos").append(pal1);
+$(".contenidos").append(txt1);
+$(".bg_palabra").css("cursor", "move");
+$(".bg_palabra").draggable({
+  //arrastramos
+  revert: "invalid",
+  zIndex: 5,
+  containment: ".actividad10",
+  scroll: false
+});
+$(".imagen").droppable({
+  drop: function(e, ui) {
+    //v_idsp5.push(ui.draggable.attr("id").substr(3));//obtenemos el id del arrastre
+    //r_idsp5.push($(this).attr("id").substr(4)); //obtenemos el id del destino
+    for (i = 1; i < 5; i++) {
+      //4 elementos
+      var nn = "c" + i; //obtenemos la clase
+      if ($(ui.draggable).hasClass(nn)) {
+        //comparamos la clase del arrastre
+        if ($(this).hasClass(nn)) {
+          //con la clase del destino q tienen en mismo nombre
+          resp.push("ok");
+        } else {
+          resp.push("no");
+        }
+      }
+    }
+    $(ui.draggable).removeClass("bg_palabra"); //quitamos clase de background
+    //console.log(resp); //respuestas
+    ui.draggable.attr("style", "");
+    $(this).append(ui.draggable);
+  }
+});
 // #endregion
 
 // #region Pregunta10
+function pregunta10() {
+  cont++;
+  $(this).unbind("click");
+  AgregaClase(".nota", claseAnimada);
+  QuitaClase(".actividad", claseAnimada);
+  temp = $(".imagen");
+  for (i = 0; i < resp.length; i++) {
+    if (resp.length == 4 && resp[i] == "ok") {
+      cor++;
+      f_ok(temp);
+    } else {
+      inc++;
+      f_no(temp);
+    }
+  }
+  //var calc = (calificacion / itemsT);
+  var total = (cor / itemsT).toFixed(2);
+  tpre10 = total;
+  f_tiempo();
+}
+// #endregion
 
+// #region Random11
+var random11 = [
+  [
+    '<span>La</span><input type="text" size="1" style="width:100px" id="cj11d"><span>es la recta perpendicular trazada en el punto medio del lado.</span>'
+  ],
+  [
+    '<span>La clasificación de los triángulos según sus</span><input type="text" size="1" style="width:100px" id="cj11a">'+
+    '<span>puede ser en</span><input type="text" size="1" style="width:100px" id="cj11b"><span>, isósceles y escalenos.</span>'
+  ],
+  [
+    '<span>La</span><input type="text" size="1" style="width:100px" id="cj11e"><span>recta que une el punto medio de un lado con el vértice opuesto.</span>'
+  ],
+  [
+    '<span>La clasificación de los triángulos según sus ángulos puede ser en</span><input type="text" size="1" style="width:100px" id="cj11c">'+
+  '<span>, obtusángulos y acutángulos.</span>'
+  ]
+];
+
+var ranonce = document.getElementsByClassName("imagen11");
+random11.sort(f_randomico);
+for (i = 0; i < ranonce.length; i++) {
+  $("#" + ranonce[i].id).html(
+    '<span width="50px">' + random11[i][0] + "</span> "
+  );
+}
+// #endregion
+
+// #region Pregunta11
+function pregunta11() {
+  var cor = 0;
+  var inc = 0;
+
+  var cj11a = document.getElementById("cj11a").value;
+  var cj11b = document.getElementById("cj11b").value;
+  var cj11c = document.getElementById("cj11c").value;
+  var cj11d = document.getElementById("cj11d").value;
+  var cj11e = document.getElementById("cj11e").value;
+
+  if (cj11a == "lados") {
+    cor = cor + 1;
+    $("#cj11a").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj11a").addClass("incorrecto");
+  }
+
+  if (cj11b == "equiláteros") {
+    cor = cor + 1;
+    $("#cj11b").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj11b").addClass("incorrecto");
+  }
+
+  if (cj11c == "rectángulos") {
+    cor = cor + 1;
+    $("#cj11c").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj11c").addClass("incorrecto");
+  }
+
+  if (cj11d == "mediatriz") {
+    cor = cor + 1;
+    $("#cj11d").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj11d").addClass("incorrecto");
+  }
+
+  if (cj11e == "mediana") {
+    cor = cor + 1;
+    $("#cj11e").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj11e").addClass("incorrecto");
+  }
+
+
+  var total = ((cor - inc) * 1) / 5;
+  if (total < 0) {
+    total = 0;
+    tpre3 = total.toFixed(2);
+  } else {
+    tpre3 = total.toFixed(2);
+  }
+}
+// #endregion
+
+// #region Pregunta12
+function pregunta12() {
+  var cor = 0;
+  var inc = 0;
+
+  var cj12a = document.getElementById("cj12a").value;
+  var cj12b = document.getElementById("cj12b").value;
+
+  if (cj12a == "12") {
+    cor = cor + 1;
+    $("#cj12a").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj12a").addClass("incorrecto");
+  }
+
+  if (cj12b == "16") {
+    cor = cor + 1;
+    $("#cj12b").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj12b").addClass("incorrecto");
+  }
+
+  var total = ((cor - inc) * 1) / 2;
+  if (total < 0) {
+    total = 0;
+    tpre12 = total.toFixed(2);
+  } else {
+    tpre12 = total.toFixed(2);
+  }
+}
 // #endregion
 
 // #region Calculo Nota Final
 function NotaFinal() {
   var pre1a = document.getElementById("pre1a").value;
-  if (pre1a == "" ) {
+  var pre9a = document.getElementById("pre9a").value;
+  if (pre1a == "" || pre9a == "" ) {
     alert("Califiqué todas las preguntas");
   } else {
     pregunta1();
@@ -780,6 +1021,11 @@ function NotaFinal() {
     pregunta5();
     pregunta6();
     pregunta7();
+    pregunta8();
+    pregunta9();
+    pregunta10();
+    pregunta11();
+    pregunta12();
     var Nf =
       parseFloat(tpre1) +
       parseFloat(tpre2) +
@@ -790,7 +1036,9 @@ function NotaFinal() {
       parseFloat(tpre7) +
       parseFloat(tpre8) +
       parseFloat(tpre9) +
-      parseFloat(tpre10) ;
+      parseFloat(tpre10) +
+      parseFloat(tpre11) +
+      parseFloat(tpre12) ;
     var Vtotal = Nf.toFixed(2);
     $("#txtNota").html(Vtotal);
     document.getElementById("bt_comprobar").disabled = true;
