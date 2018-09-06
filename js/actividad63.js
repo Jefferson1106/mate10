@@ -21,7 +21,12 @@ function validar3(e) {
     return false;
   }
 }
-
+document.getElementById("pre12a").addEventListener("keypress", () => {
+  validNumero(0, 1, 1);
+});
+document.getElementById("pre12a").addEventListener("keyup", () => {
+  validMaxIngreso(document.getElementById("pre12a"), 1);
+});
 
 var tpre1 = 0;
 var tpre2 = 0;
@@ -257,12 +262,12 @@ function pregunta3() {
 
 
 
-  var total = ((cor - inc) * 1) / 6;
+  var total = ((cor - inc) * 1) / 3;
   if (total < 0) {
     total = 0;
-    tpre4 = total.toFixed(2);
+    tpre3 = total.toFixed(2);
   } else {
-    tpre4 = total.toFixed(2);
+    tpre3 = total.toFixed(2);
   }
 }
 // #endregion
@@ -1134,7 +1139,7 @@ function pregunta11() {
     $("#cj11d").addClass("incorrecto");
   }
 
-  if (cj11e == "V" || cj11e == "f") {
+  if (cj11e == "V" || cj11e == "v") {
     cor = cor + 1;
     $("#cj11e").addClass("correcto");
   } else {
@@ -1161,9 +1166,49 @@ function pregunta11() {
 }
 // #endregion
 
-// #region Pregunta12
+// #region Random12
+var random12 = [
+  [
+    '<span>El △ DEC , según sus lados, se clasifica dentro de los triángulos.</span><br>'+
+    '<textarea  class="form-control text-question no-redimensionar " cols="60" rows="2"></textarea>'
+  ],
+  [
+    '<span>¿Crees que △ ABC ≈ △ DEC ? <b>Argumenta</b> tu respuesta.</span><br>'+
+    '<textarea  class="form-control text-question no-redimensionar " cols="60" rows="2"></textarea>'
+  ],
+  [
+    '<span>¿Cuál es la medida de ∡CED ?</span><br>'+
+    '<textarea  class="form-control text-question no-redimensionar " cols="60" rows="2"></textarea>'
+  ],
+  [
+    '<span>El △ ABC , según sus lados, se clasifica dentro de los triángulos.</span><br>'+
+    '<textarea  class="form-control text-question no-redimensionar " cols="60" rows="2"></textarea>'
+  ],
+  [
+    '<span><b>Traza</b> la altura en y <b>analiza</b> los triángulos que se obtienen. <b>Determina</b> cuáles de ellos son semejantes.</span><br>'+
+    '<textarea  class="form-control text-question no-redimensionar " cols="60" rows="2"></textarea>'
+  ],
+  [
+    '<span>¿Cuál es la medida de ∡CAB ?</span><br>'+
+    '<textarea  class="form-control text-question no-redimensionar " cols="60" rows="2"></textarea>'
+  ]
+];
 
+var randoce = document.getElementsByClassName("imagen12");
+random12.sort(f_randomico);
+for (i = 0; i < randoce.length; i++) {
+  $("#" + randoce[i].id).html(
+    '<span width="50px">' + random12[i][0] + "</span> "
+  );
+}
 // #endregion
+
+function pregunta12() {
+  var pre12a = document.getElementById("pre12a").value;
+  
+      tpre12 = pre12a;
+  
+}
 
 // #region Calculo Nota Final
 function NotaFinal() {
@@ -1179,6 +1224,7 @@ function NotaFinal() {
     pregunta9();
     pregunta10();
     pregunta11();
+    pregunta12();
     var Nf =
       parseFloat(tpre1) +
       parseFloat(tpre2) +
@@ -1192,7 +1238,8 @@ function NotaFinal() {
       parseFloat(tpre10) +
       parseFloat(tpre11) +
       parseFloat(tpre12) ;
-    var Vtotal = Nf.toFixed(2);
+    var total =((Nf*10)/12)
+    var Vtotal = total.toFixed(2);
     $("#txtNota").html(Vtotal);
     document.getElementById("bt_comprobar").disabled = true;
 }
