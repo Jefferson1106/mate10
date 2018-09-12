@@ -2,9 +2,37 @@
 $(document).ready(function () {
     var agrega_salir= "<li><button  class='btn button button_1 btnSalir' onclick='salir()' data-toggle='tooltip' data-placement='top' title='Cerrar Actividad'><span class='glyphicon glyphicon-remove-sign' aria-hidden='true'></span></button></li>"
                 $( ".navbar-left" ).append( agrega_salir);
-    // $('[data-toggle="tooltip"]').tooltip();
+    var ayuda = '<br>Para evaluar el ejercicio pulsa sobre <span class="glyphicon glyphicon-check help-ico bcalificar" aria-hidden="true"></span>' +
+        '<br>Para repetir el ejercicio pulsa sobre <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>' +
+        '<br>Para guardar la actividad, pulsa sobre <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>';
+    $("#ayudas").html("");
+    $("#ayudas").append(ayuda);
+    $('[data-toggle="tooltip"]').tooltip();
 
-    //cerrar_ayuda();
+    $(".glyphicon-check").mouseover(function(){
+        $(".btnCalificar").addClass("animate bounceIn");
+    });
+    $(".glyphicon-check").mouseout(function(){
+        $(".btnCalificar").removeClass("animate bounceIn");
+    });
+    $(".glyphicon-refresh").mouseover(function(){
+        $(".btnRepetir").addClass("animate bounceIn");
+    });
+    $(".glyphicon-refresh").mouseout(function(){
+        $(".btnRepetir").removeClass("animate bounceIn");
+    });
+    $(".glyphicon-floppy-save").mouseover(function(){
+        $(".btnGuardar").addClass("animate bounceIn");
+    });
+    $(".glyphicon-floppy-save").mouseout(function(){
+        $(".btnGuardar").removeClass("animate bounceIn");
+    });
+    $(".glyphicon-play").mouseover(function(){
+        $(".btnIniciar").addClass("animate bounceIn");
+    });
+    $(".glyphicon-play").mouseout(function(){
+        $(".btnIniciar").removeClass("animate bounceIn");
+    });
 
     $('#activity').attr('class', '').addClass('panel border-'+titulos);
     $('.panel-heading ').attr('class', '').addClass('panel-heading bg-'+titulos);
@@ -30,14 +58,19 @@ $(document).ready(function () {
         case "evaluacion":
             $(".titulo").html("").append("<img src='img/icoTST.png' alt='Evaluación sumativa'> Evaluación sumativa");
             break;
+        case "diagnostico":
+            $(".titulo").html("").append("<img src='img/icoTST.png' alt='Evaluación sumativa'> Prueba Diagnóstico");
+            break;
         case "prueba":
-            $(".titulo").html("").append("<img src='img/icoTST.png' alt='Prueba Diagnóstica'> Prueba Diagnóstica");
+            $(".titulo").html("").append("<img src='img/icoTST.png' alt='Prueba Diagnóstica'> Prueba Diagnóstico");
             break;
         case "organizo":
             $(".titulo").html("").append("<img src='img/icoO.png' alt='Organizo mis ideas'> Organizo mis ideas");
             break;
+        case "problemas":
+            $(".titulo").html("").append("<img src='img/icoP.png' alt='Resolucion de problemas'> Resolución de Problemas");
+            break;
     }
-
 });
 
 $(".btn").click(function (e) {
@@ -190,9 +223,9 @@ function demoFromHTML() {
             // to an actual DOM element from which the text will be scraped.
             , source = $('#activity')[0]
 
-            // we support special element handlers. Register them with jQuery-style 
+            // we support special element handlers. Register them with jQuery-style
             // ID selector for either ID or node name. ("#iAmID", "div", "span" etc.)
-            // There is no support for any other type of selectors 
+            // There is no support for any other type of selectors
             // (class, of compound) at this time.
             , specialElementHandlers = {
                 // element with id of "bypass" - jQuery style selector
@@ -219,7 +252,7 @@ function demoFromHTML() {
                 , 'elementHandlers': specialElementHandlers
             },
             function (dispose) {
-                // dispose: object with X, Y of the last line add to the PDF 
+                // dispose: object with X, Y of the last line add to the PDF
                 //          this allow the insertion of new lines after html
                 pdf.save('Test.pdf');
             },

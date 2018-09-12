@@ -18,7 +18,7 @@ body{
     font-family: Myriad_Regular;
 }
 b{
-    font-family: "Myriad_Bold";    
+    font-family: "Myriad_Bold";
 }
 .button{
     border: none;
@@ -174,7 +174,7 @@ b{
     border-radius: 4px;
 }
 
-.actividad{    
+.actividad{
     background: #ea451c;
     color: #f2f2f2;
 }
@@ -381,7 +381,7 @@ b{
 .bg-exploro, .bg-prueba,.bg-problemas{
     background-color: #009277;
 }
-.bg-aplico{
+.bg-aplico, .bg-preparo{
     background-color: #005ca4;
 }
 .bg-evaluacion{
@@ -410,7 +410,7 @@ b{
     border-style: solid;
     border-width: 1px;
 }
-.border-aplico{
+.border-aplico, .border-preparo{
     border-color: #005ca4 !important;
     border-style: solid;
     border-width: 1px;
@@ -608,7 +608,7 @@ b{
 .nota-abierta{
     width: 55px;
     border: solid;
-    background: none;   
+    background: none;
     border-width: 1px;
     border-color: #007acc;
     text-align: right;
@@ -618,7 +618,7 @@ b{
 .input1{
     width: 75px;
     border: solid;
-    background: none;   
+    background: none;
     border-width: 1px;
     border-color: #00cc00;
     text-align: center;

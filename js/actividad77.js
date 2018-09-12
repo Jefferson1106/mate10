@@ -78,73 +78,63 @@ function pregunta1() {
   var cbounoe = document.getElementById("cbounoe").value;
   var cbounof = document.getElementById("cbounof").value;
 
-  if (
-    cbounoa == "1" ||
-    cbounob == "1" ||
-    cbounoc == "1" ||
-    cbounod == "1" ||
-    cbounoe == "1" ||
-    cbounof == "1"
-  ) {
-    alert("Pregunta 1: Seleccione todas las respuestas posibles");
+  if (cbounoa == "3") {
+    cor = cor + 1;
+    $("#cbounoa").addClass("correcto");
   } else {
-    if (cbounoa == "3") {
-      cor = cor + 1;
-      $("#cbounoa").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cbounoa").removeClass("correcto");
-      $("#cbounoa").addClass("incorrecto");
-    }
-    if (cbounob == "2") {
-      cor = cor + 1;
-      $("#cbounob").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cbounob").removeClass("correcto");
-      $("#cbounob").addClass("incorrecto");
-    }
-    if (cbounoc == "2") {
-      cor = cor + 1;
-      $("#cbounoc").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cbounoc").removeClass("correcto");
-      $("#cbounoc").addClass("incorrecto");
-    }
-    if (cbounod == "3") {
-      cor = cor + 1;
-      $("#cbounod").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cbounod").removeClass("correcto");
-      $("#cbounod").addClass("incorrecto");
-    }
-    if (cbounoe == "2") {
-      cor = cor + 1;
-      $("#cbounoe").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cbounoe").removeClass("correcto");
-      $("#cbounoe").addClass("incorrecto");
-    }
-    if (cbounof == "2") {
-      cor = cor + 1;
-      $("#cbounof").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cbounof").removeClass("correcto");
-      $("#cbounof").addClass("incorrecto");
-    }
-    var total = (cor * 1) / 6;
-    if (total < 0) {
-      total = 0;
-      tpre1 = total.toFixed(2);
-    } else {
-      tpre1 = total.toFixed(2);
-    }
+    inc = inc + 1;
+    $("#cbounoa").removeClass("correcto");
+    $("#cbounoa").addClass("incorrecto");
+  }
+  if (cbounob == "2") {
+    cor = cor + 1;
+    $("#cbounob").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cbounob").removeClass("correcto");
+    $("#cbounob").addClass("incorrecto");
+  }
+  if (cbounoc == "2") {
+    cor = cor + 1;
+    $("#cbounoc").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cbounoc").removeClass("correcto");
+    $("#cbounoc").addClass("incorrecto");
+  }
+  if (cbounod == "3") {
+    cor = cor + 1;
+    $("#cbounod").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cbounod").removeClass("correcto");
+    $("#cbounod").addClass("incorrecto");
+  }
+  if (cbounoe == "2") {
+    cor = cor + 1;
+    $("#cbounoe").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cbounoe").removeClass("correcto");
+    $("#cbounoe").addClass("incorrecto");
+  }
+  if (cbounof == "2") {
+    cor = cor + 1;
+    $("#cbounof").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cbounof").removeClass("correcto");
+    $("#cbounof").addClass("incorrecto");
+  }
+  var total = (cor * 1) / 6;
+  if (total < 0) {
+    total = 0;
+    tpre1 = total.toFixed(2);
+  } else {
+    tpre1 = total.toFixed(2);
   }
 }
+
 // #endregion
 
 // #region Random2
@@ -186,51 +176,48 @@ function pregunta2() {
   var cbodosc = document.getElementById("cbodosc").value;
   var cbodosd = document.getElementById("cbodosd").value;
 
-  if (cbodosa == "1" || cbodosb == "1" || cbodosc == "1" || cbodosd == "1") {
-    alert("Pregunta 2: Seleccione todas las respuestas posibles");
+  if (cbodosa == "3") {
+    cor = cor + 1;
+    $("#cbodosa").addClass("correcto");
   } else {
-    if (cbodosa == "3") {
-      cor = cor + 1;
-      $("#cbodosa").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cbodosa").removeClass("correcto");
-      $("#cbodosa").addClass("incorrecto");
-    }
-    if (cbodosb == "2") {
-      cor = cor + 1;
-      $("#cbodosb").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cbodosb").removeClass("correcto");
-      $("#cbodosb").addClass("incorrecto");
-    }
-    if (cbodosc == "2") {
-      cor = cor + 1;
-      $("#cbodosc").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cbodosc").removeClass("correcto");
-      $("#cbodosc").addClass("incorrecto");
-    }
-    if (cbodosd == "2") {
-      cor = cor + 1;
-      $("#cbodosd").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cbodosd").removeClass("correcto");
-      $("#cbodosd").addClass("incorrecto");
-    }
+    inc = inc + 1;
+    $("#cbodosa").removeClass("correcto");
+    $("#cbodosa").addClass("incorrecto");
+  }
+  if (cbodosb == "2") {
+    cor = cor + 1;
+    $("#cbodosb").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cbodosb").removeClass("correcto");
+    $("#cbodosb").addClass("incorrecto");
+  }
+  if (cbodosc == "2") {
+    cor = cor + 1;
+    $("#cbodosc").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cbodosc").removeClass("correcto");
+    $("#cbodosc").addClass("incorrecto");
+  }
+  if (cbodosd == "2") {
+    cor = cor + 1;
+    $("#cbodosd").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cbodosd").removeClass("correcto");
+    $("#cbodosd").addClass("incorrecto");
+  }
 
-    var total = (cor * 1) / 4;
-    if (total < 0) {
-      total = 0;
-      tpre2 = total.toFixed(2);
-    } else {
-      tpre2 = total.toFixed(2);
-    }
+  var total = (cor * 1) / 4;
+  if (total < 0) {
+    total = 0;
+    tpre2 = total.toFixed(2);
+  } else {
+    tpre2 = total.toFixed(2);
   }
 }
+
 // #endregion
 
 // #region Pregunta3
@@ -317,56 +304,48 @@ function pregunta6() {
   var cboseisc = document.getElementById("cboseisc").value;
   var cboseisd = document.getElementById("cboseisd").value;
 
-  if (
-    cboseisa == "1" ||
-    cboseisb == "1" ||
-    cboseisc == "1" ||
-    cboseisd == "1"
-  ) {
-    alert("Pregunta 6: Seleccione todas las respuestas posibles");
+  if (cboseisa == "3") {
+    cor = cor + 1;
+    $("#cboseisa").addClass("correcto");
   } else {
-    if (cboseisa == "3") {
-      cor = cor + 1;
-      $("#cboseisa").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cboseisa").removeClass("correcto");
-      $("#cboseisa").addClass("incorrecto");
-    }
-    if (cboseisb == "4") {
-      cor = cor + 1;
-      $("#cboseisb").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cboseisb").removeClass("correcto");
-      $("#cboseisb").addClass("incorrecto");
-    }
-    if (cboseisc == "3") {
-      cor = cor + 1;
-      $("#cboseisc").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cboseisc").removeClass("correcto");
-      $("#cboseisc").addClass("incorrecto");
-    }
-    if (cboseisd == "2") {
-      cor = cor + 1;
-      $("#cboseisd").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cboseisd").removeClass("correcto");
-      $("#cboseisd").addClass("incorrecto");
-    }
+    inc = inc + 1;
+    $("#cboseisa").removeClass("correcto");
+    $("#cboseisa").addClass("incorrecto");
+  }
+  if (cboseisb == "4") {
+    cor = cor + 1;
+    $("#cboseisb").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cboseisb").removeClass("correcto");
+    $("#cboseisb").addClass("incorrecto");
+  }
+  if (cboseisc == "3") {
+    cor = cor + 1;
+    $("#cboseisc").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cboseisc").removeClass("correcto");
+    $("#cboseisc").addClass("incorrecto");
+  }
+  if (cboseisd == "2") {
+    cor = cor + 1;
+    $("#cboseisd").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cboseisd").removeClass("correcto");
+    $("#cboseisd").addClass("incorrecto");
+  }
 
-    var total = (cor * 1) / 4;
-    if (total < 0) {
-      total = 0;
-      tpre6 = total.toFixed(2);
-    } else {
-      tpre6 = total.toFixed(2);
-    }
+  var total = (cor * 1) / 4;
+  if (total < 0) {
+    total = 0;
+    tpre6 = total.toFixed(2);
+  } else {
+    tpre6 = total.toFixed(2);
   }
 }
+
 // #endregion
 
 // #region Random7
@@ -404,56 +383,48 @@ function pregunta7() {
   var cbosietec = document.getElementById("cbosietec").value;
   var cbosieted = document.getElementById("cbosieted").value;
 
-  if (
-    cbosietea == "1" ||
-    cbosieteb == "1" ||
-    cbosietec == "1" ||
-    cbosieted == "1"
-  ) {
-    alert("Pregunta 7: Seleccione todas las respuestas posibles");
+  if (cbosietea == "2") {
+    cor = cor + 1;
+    $("#cbosietea").addClass("correcto");
   } else {
-    if (cbosietea == "2") {
-      cor = cor + 1;
-      $("#cbosietea").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cbosietea").removeClass("correcto");
-      $("#cbosietea").addClass("incorrecto");
-    }
-    if (cbosieteb == "3") {
-      cor = cor + 1;
-      $("#cbosieteb").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cbosieteb").removeClass("correcto");
-      $("#cbosieteb").addClass("incorrecto");
-    }
-    if (cbosietec == "2") {
-      cor = cor + 1;
-      $("#cbosietec").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cbosietec").removeClass("correcto");
-      $("#cbosietec").addClass("incorrecto");
-    }
-    if (cbosieted == "4") {
-      cor = cor + 1;
-      $("#cbosieted").addClass("correcto");
-    } else {
-      inc = inc + 1;
-      $("#cbosieted").removeClass("correcto");
-      $("#cbosieted").addClass("incorrecto");
-    }
+    inc = inc + 1;
+    $("#cbosietea").removeClass("correcto");
+    $("#cbosietea").addClass("incorrecto");
+  }
+  if (cbosieteb == "3") {
+    cor = cor + 1;
+    $("#cbosieteb").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cbosieteb").removeClass("correcto");
+    $("#cbosieteb").addClass("incorrecto");
+  }
+  if (cbosietec == "2") {
+    cor = cor + 1;
+    $("#cbosietec").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cbosietec").removeClass("correcto");
+    $("#cbosietec").addClass("incorrecto");
+  }
+  if (cbosieted == "4") {
+    cor = cor + 1;
+    $("#cbosieted").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cbosieted").removeClass("correcto");
+    $("#cbosieted").addClass("incorrecto");
+  }
 
-    var total = (cor * 1) / 4;
-    if (total < 0) {
-      total = 0;
-      tpre7 = total.toFixed(2);
-    } else {
-      tpre7 = total.toFixed(2);
-    }
+  var total = (cor * 1) / 4;
+  if (total < 0) {
+    total = 0;
+    tpre7 = total.toFixed(2);
+  } else {
+    tpre7 = total.toFixed(2);
   }
 }
+
 // #endregion
 
 // #region Random8
@@ -533,7 +504,7 @@ function pregunta8() {
     $("#cj8e").addClass("incorrecto");
   }
 
-  if (cj8f == "Ninguna") {
+  if (cj8f == "Ninguna" ||  cj8f == "ninguna") {
     cor = cor + 1;
     $("#cj8f").addClass("correcto");
   } else {
@@ -612,8 +583,8 @@ function NotaFinal() {
               parseFloat(tpre6) +
               parseFloat(tpre7) +
               parseFloat(tpre8);
-            var Vtotal = (Nf*10)/8;
-            var total=Vtotal.toFixed(2);
+            var Vtotal = (Nf * 10) / 8;
+            var total = Vtotal.toFixed(2);
             $("#txtNota").html(total);
             document.getElementById("bt_comprobar").disabled = true;
           }

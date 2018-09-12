@@ -13,17 +13,12 @@
     background-color: white;
     color: black;
 }
-.seleccionCaja2{
-    background-color: rgb(34, 122, 204);
-    color: white;
-    border-radius: 5px;
-}
-.deseleccionCaja2{
-    background-color: white;
-    color: black;
-}
 .markRespoIncor{
     background-color: red;
+    color: black;
+}
+.markRespocor{
+    background-color: green;
     color: black;
 }
 .btnAccordion{
@@ -32,7 +27,7 @@
 .notaAbiertaAccordion{
 width: 55px;
 border: solid;
-background: none;   
+background: none;
 border-width: 1px;
 border-color: #ffffff;
 text-align: right;
@@ -41,14 +36,4 @@ border-radius: 5px;
 }
 .dndAligned{
     display: grid;
-}
-.fracLineButtonNum{
-    border-bottom: 1px solid black;
-}
-.alignFraction{
-    text-align: center;
-}
-.periodDecimalIndicator{
-    border-top: 1px solid black;
-    
 }
