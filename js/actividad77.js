@@ -134,7 +134,6 @@ function pregunta1() {
     tpre1 = total.toFixed(2);
   }
 }
-
 // #endregion
 
 // #region Random2
@@ -504,7 +503,7 @@ function pregunta8() {
     $("#cj8e").addClass("incorrecto");
   }
 
-  if (cj8f == "Ninguna" ||  cj8f == "ninguna") {
+  if (cj8f == "Ninguna" || cj8f == "ninguna") {
     cor = cor + 1;
     $("#cj8f").addClass("correcto");
   } else {
@@ -543,6 +542,10 @@ function NotaFinal() {
     if (cbodosa == "1" || cbodosb == "1" || cbodosc == "1" || cbodosd == "1") {
       alert("Pregunta 2: Seleccione todas las respuestas posibles");
     } else {
+      var cboseisa = document.getElementById("cboseisa").value;
+      var cboseisb = document.getElementById("cboseisb").value;
+      var cboseisc = document.getElementById("cboseisc").value;
+      var cboseisd = document.getElementById("cboseisd").value;
       if (
         cboseisa == "1" ||
         cboseisb == "1" ||
@@ -551,6 +554,10 @@ function NotaFinal() {
       ) {
         alert("Pregunta 6: Seleccione todas las respuestas posibles");
       } else {
+        var cbosietea = document.getElementById("cbosietea").value;
+        var cbosieteb = document.getElementById("cbosieteb").value;
+        var cbosietec = document.getElementById("cbosietec").value;
+        var cbosieted = document.getElementById("cbosieted").value;
         if (
           cbosietea == "1" ||
           cbosieteb == "1" ||

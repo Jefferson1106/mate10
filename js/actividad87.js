@@ -89,7 +89,7 @@ function pregunta1() {
     tpre1 = total.toFixed(2);
   }
 
-  $("#pre1a").val(parseFloat(total).toFixed(2));
+  $("#pre1a").val(parseFloat(tpre1).toFixed(2));
 }
 // #endregion
 
@@ -116,7 +116,7 @@ function pregunta2() {
     tpre2 = total.toFixed(2);
   }
 
-  $("#pre2a").val(tpre2);
+  $("#pre2a").val(parseFloat(tpre2).toFixed(2));
 }
 // #endregion
 
@@ -152,7 +152,7 @@ function pregunta3() {
     tpre3 = total.toFixed(2);
   }
 
-  $("#pre3a").val(tpre3);
+  $("#pre3a").val(parseFloat(tpre3).toFixed(2));
 }
 // #endregion
 
@@ -178,7 +178,7 @@ function pregunta4() {
   } else {
     tpre4 = total.toFixed(2);
   }
-  $("#pre4a").val(tpre4);
+  $("#pre4a").val(parseFloat(tpre4).toFixed(2));
 }
 // #endregion
 
@@ -188,7 +188,7 @@ function pregunta5() {
 
   tpre5 = pre5a;
 
-  $("#pre5a").val(tpre5);
+  $("#pre5a").val(parseFloat(tpre5).toFixed(2));
 }
 // #endregion
 
