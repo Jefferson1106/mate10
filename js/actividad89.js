@@ -15,6 +15,12 @@ document.getElementById("pre4a").addEventListener("keyup", () => {
   validMaxIngreso(document.getElementById("pre4a"), 2);
 });
 
+document.getElementById("pre5a").addEventListener("keypress", () => {
+  validNumero(0, 1, 1);
+});
+document.getElementById("pre5a").addEventListener("keyup", () => {
+  validMaxIngreso(document.getElementById("pre5a"), 1.5);
+});
 var tpre1 = 0;
 var tpre2 = 0;
 var tpre3 = 0;
@@ -144,23 +150,85 @@ function pregunta4() {
 // #endregion
 
 // #region Random5
+var random5 = [
+  [
+    '<img class="img-responsive" src="img/i2_p97_act5.jpg"><br><textarea class="form-control text-question no-redimensionar " cols="100" rows="3"></textarea>'
+  ],
+  [
+    '<img class="img-responsive" src="img/i1_p97_act5.jpg"><br><textarea class="form-control text-question no-redimensionar " cols="100" rows="3"></textarea>'
+  ],
+  [
+    '<img class="img-responsive" src="img/i3_p97_act5.jpg"><br><textarea class="form-control text-question no-redimensionar " cols="100" rows="3"></textarea>'
+  ]
+];
 
+var rancinco = document.getElementsByClassName("imagen5");
+random5.sort(f_randomico);
+for (i = 0; i < rancinco.length; i++) {
+  $("#" + rancinco[i].id).html(
+    '<span width="50px">' + random5[i][0] + "</span> "
+  );
+}
 // #endregion
 
 // #region Pregunta5
-
-// #endregion
-
-// #region Random6
-
+function pregunta5() {
+  var pre5a = document.getElementById("pre5a").value;
+  tpre5 = pre5a;
+  $("#pre5a").val(parseFloat(tpre5).toFixed(2));
+}
 // #endregion
 
 // #region Pregunta6
+function pregunta6() {
+  var cor = 0;
+  var inc = 0;
 
+  var cj6a = document.getElementById("cj6a").value;
+
+  if (cj6a == "16" ) {
+    cor = cor + 1;
+    $("#cj6a").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj6a").addClass("incorrecto");
+  }
+
+  var total = (cor * 1.5) / 1;
+  if (total < 0) {
+    total = 0;
+    tpre6 = total.toFixed(2);
+  } else {
+    tpre6 = total.toFixed(2);
+  }
+  $("#pre6a").val(parseFloat(tpre6).toFixed(2));
+}
 // #endregion
 
 // #region Pregunta7
+function pregunta7() {
+  var cor = 0;
+  var inc = 0;
 
+  var cj7a = document.getElementById("cj7a").value;
+
+  if (cj7a == "5,63" ) {
+    cor = cor + 1;
+    $("#cj7a").addClass("correcto");
+  } else {
+    inc = inc + 1;
+    $("#cj7a").addClass("incorrecto");
+  }
+
+  var total = (cor * 1) / 1;
+  if (total < 0) {
+    total = 0;
+    tpre7 = total.toFixed(2);
+  } else {
+    tpre7 = total.toFixed(2);
+  }
+  $("#pre7a").val(parseFloat(tpre7).toFixed(2));
+}
 // #endregion
 
 // #region Pregunta8
@@ -183,9 +251,16 @@ function NotaFinal() {
       if (pre4a == "") {
         alert("Pregunta 4: Califiqué la pregunta");
       } else {
+        var pre5a = document.getElementById("pre5a").value;
+      if (pre5a == "") {
+        alert("Pregunta 5: Califiqué la pregunta");
+      } else {
         pregunta2();
         pregunta3();
         preugnta4();
+        pregunta5();
+        pregunta6();
+        pregunta7();
         var Nf =
           parseFloat(tpre1) +
           parseFloat(tpre2) +
@@ -202,5 +277,6 @@ function NotaFinal() {
     }
   }
 }
+ }
 
 // #endregion
