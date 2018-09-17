@@ -21,7 +21,9 @@ document.getElementById("pre5a").addEventListener("keypress", () => {
 document.getElementById("pre5a").addEventListener("keyup", () => {
   validMaxIngreso(document.getElementById("pre5a"), 1.5);
 });
-var tpre1 = 0;
+var tpre1a = 0;
+var tpre1b = 0;
+var tpre1c = 0;
 var tpre2 = 0;
 var tpre3 = 0;
 var tpre4 = 0;
@@ -30,12 +32,94 @@ var tpre6 = 0;
 var tpre7 = 0;
 var tpre8 = 0;
 
-// #region Random1
 
+
+// #region Random1
+var ejer = 1,
+  itemsT = 6,
+  cont = 0,
+  tmp,
+  cor = 0,
+  inc = 0,
+  calificacion = 1,
+  claseAnimada = "animate bounceIn";
+var resp = [],
+  i;
+
+var pal1 = [
+  '<span class="bg_palabra c3">&nbsp;Rf: [ 0, 3]&nbsp;</span>',
+  '<span class="bg_palabra c1 ">&nbsp;Df: ℝ&nbsp;</span>',
+  '<span class="bg_palabra c2 ">&nbsp;Df: ℝ&nbsp;</span>',
+  '<span class="bg_palabra c2">&nbsp;Rf: ℝ&nbsp;</span>',
+  '<span class="bg_palabra c3">&nbsp;Df: [ − 3, 3]&nbsp;</span>', 
+  '<span class="bg_palabra c1">&nbsp;Rf: (− ∞, 3]&nbsp;</span>', 
+];
+var txt1 = [
+  '<tr><td><div class="cajas imagen c1" id="caja_img1"></div></td><td><div class="col-lg-6 col-md-6 col-sm-6 col-xs-7 cajas texto" id="caja_txt1"><img src="img/i1_p96_act1.jpg"></div></td></tr>',
+  '<tr><td><div class="cajas imagen c2" id="caja_img1"></div></td><td><div class="col-lg-6 col-md-6 col-sm-6 col-xs-7 cajas texto" id="caja_txt1"><img src="img/i2_p96_act1.jpg"></div></td></tr>',
+  '<tr><td><div class="cajas imagen c3" id="caja_img1"></div></td><td><div class="col-lg-6 col-md-6 col-sm-6 col-xs-7 cajas texto" id="caja_txt1"><img src="img/i3_p96_act1.jpg"></div></td></tr>',
+  ];
+pal1.sort(f_randomico);
+txt1.sort(f_randomico);
+$(".textos").append(pal1);
+$(".contenidos").append(txt1);
+$(".bg_palabra").css("cursor", "move");
+$(".bg_palabra").draggable({
+  //arrastramos
+  revert: "invalid",
+  zIndex: 5,
+  containment: ".actividad1",
+  scroll: false
+});
+$(".imagen").droppable({
+  drop: function(e, ui) {
+    //v_idsp5.push(ui.draggable.attr("id").substr(3));//obtenemos el id del arrastre
+    //r_idsp5.push($(this).attr("id").substr(4)); //obtenemos el id del destino
+    for (i = 1; i < 7; i++) {
+      //4 elementos
+      var nn = "c" + i; //obtenemos la clase
+      if ($(ui.draggable).hasClass(nn)) {
+        //comparamos la clase del arrastre
+        if ($(this).hasClass(nn)) {
+          //con la clase del destino q tienen en mismo nombre
+          resp.push("ok");
+        } else {
+          resp.push("no");
+        }
+      }
+    }
+    $(ui.draggable).removeClass("bg_palabra"); //quitamos clase de background
+    //console.log(resp); //respuestas
+    ui.draggable.attr("style", "");
+    $(this).append(ui.draggable);
+  }
+});
 // #endregion
 
 // #region Pregunta1
+function pregunta1() {
+  cont++;
+  $(this).unbind("click");
+  AgregaClase(".nota", claseAnimada);
+  QuitaClase(".actividad", claseAnimada);
+  temp = $(".imagen");
+  for (i = 0; i < resp.length; i++) {
+    if (resp.length == 6 && resp[i] == "ok") {
+      cor++;
+      f_ok(temp);
+    } else {
+      inc++;
+      f_no(temp);
+    }
+  }
+  //var calc = (calificacion / itemsT);
+  var total = (cor / itemsT).toFixed(2);
+  tpre1 = total*2;
 
+  $("#pre1a").val(parseFloat(tpre1).toFixed(2));
+
+  f_tiempo();
+}
 // #endregion
 
 // #region Random2
@@ -97,11 +181,11 @@ function pregunta2() {
   var total = (cor * 1) / 3;
   if (total < 0) {
     total = 0;
-    tpre1 = total.toFixed(2);
+    tpre2 = total.toFixed(2);
   } else {
-    tpre1 = total.toFixed(2);
+    tpre2 = total.toFixed(2);
   }
-  $("#pre1a").val(parseFloat(tpre1).toFixed(2));
+  $("#pre2a").val(parseFloat(tpre2).toFixed(2));
 }
 // #endregion
 
@@ -255,9 +339,10 @@ function NotaFinal() {
       if (pre5a == "") {
         alert("Pregunta 5: Califiqué la pregunta");
       } else {
+        pregunta1();
         pregunta2();
         pregunta3();
-        preugnta4();
+        pregunta4();
         pregunta5();
         pregunta6();
         pregunta7();
@@ -268,8 +353,7 @@ function NotaFinal() {
           parseFloat(tpre4) +
           parseFloat(tpre5) +
           parseFloat(tpre6) +
-          parseFloat(tpre7) +
-          parseFloat(tpre8);
+          parseFloat(tpre7);
         var Vtotal = Nf.toFixed(2);
         $("#txtNota").html(Vtotal);
         document.getElementById("bt_comprobar").disabled = true;
