@@ -152,10 +152,10 @@ function pregunta3()
     }
   }
   //var calc = (calificacion / itemsT);
-  var tpre3 = (cor / itemsT).toFixed(2);
-  $("#pre3a").val(parseFloat(tpre3).toFixed(2));
-
+  var total = (cor / itemsT).toFixed(2);
   f_tiempo();
+  tpre3=total;
+  $("#pre3a").val(parseFloat(tpre3).toFixed(2));
 }
 // #endregion
 
