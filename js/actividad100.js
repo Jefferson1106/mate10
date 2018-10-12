@@ -189,7 +189,7 @@ insertAttributeDraggableElements(".columna1draggable");
 insertAttributeDroppableElements(".columna1droppable", classes.preg2DnD);
 insertAttributeDraggableElements(".columna3draggable");
 
-function pregunta5() {
+function pregunta10() {
   var selector = [];
   selector.push(valuesAdic.selectorsAct2[1]);
   calcMultiLinkActivity(
@@ -202,7 +202,7 @@ function pregunta5() {
   );
 }
 // #region Pregunta10
-function pregunta10() {
+function pregunta5() {
   var pre5a = document.getElementById("pre5a").value;
   tpre5 = pre5a;
   $("#pre5a").val(parseFloat(tpre5).toFixed(2));
@@ -219,7 +219,7 @@ function NotaFinal() {
     pregunta2();
     pregunta3();
     pregunta4();
-    pregunta10();
+    pregunta5();
     var Nf =
       parseFloat(tpre1) +
       parseFloat(tpre2) +
